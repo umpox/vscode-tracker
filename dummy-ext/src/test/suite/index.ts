@@ -65,10 +65,10 @@ function getDeepProperties(obj: object): object {
       ) {
         result[key] = getDeepProperties(value);
       } else {
-        result[key] = value; // capturing the type of the property
+        result[key] = typeof value;
       }
-    } catch (error: any) {
-      result[key] = `Error: ${error.message}`;
+    } catch {
+      // Do nothing. This is likely due to accessing a proposed API. We just omit those right now.
     }
   }
 

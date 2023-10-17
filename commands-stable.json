@@ -1,7 +1,7 @@
 {
   "version": "1.83.1",
   "commands": [
-    "__vsclnugw4r2 ",
+    "__vsclnui5nh7 ",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -1560,7 +1560,6 @@
     "workbench.action.openWorkspaceSettingsFile",
     "workbench.action.openYouTubeUrl",
     "workbench.action.output.show.editSessions",
-    "workbench.action.output.show.exthost",
     "workbench.action.output.show.main",
     "workbench.action.output.show.remoteTunnelService",
     "workbench.action.output.show.rendererLog",
@@ -1569,6 +1568,7 @@
     "workbench.action.output.show.terminal",
     "workbench.action.output.show.userDataSync",
     "workbench.action.output.show.vscode.git.Git",
+    "workbench.action.output.show.vscode.github.GitHub",
     "workbench.action.output.toggleOutput",
     "workbench.action.pauseSocketWriting",
     "workbench.action.pinEditor",
