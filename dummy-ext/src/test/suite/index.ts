@@ -31,29 +31,88 @@ export function writeCommandOutput(
   return writeFileSync(path, JSON.stringify(commandOutput, null, 2), "utf-8");
 }
 
-export async function run(): Promise<void> {
-  assert(process.env.OUTPUT_FILE, "OUTPUT_FILE is required");
-  const outputFile = path.resolve(REPO_ROOT, process.env.OUTPUT_FILE);
+export interface ApiOutput {
+  version: string;
+  api: object;
+}
 
-  const existingCommandOutput = parseCommandOutput(outputFile);
-  if (existingCommandOutput.version === vscode.version) {
-    console.log("Skipping test run, output is already up to date");
-    return;
+export function parseApiOutput(path: string): ApiOutput {
+  try {
+    const file = readFileSync(path, "utf8");
+    const config = JSON.parse(file) as ApiOutput;
+    return config;
+  } catch (error) {
+    console.error(`Error parsing exisitng output file: ${error}`);
+    throw error;
+  }
+}
+
+export function writeApiOutput(path: string, apiOutput: ApiOutput): void {
+  return writeFileSync(path, JSON.stringify(apiOutput, null, 2), "utf-8");
+}
+
+function getDeepProperties(obj: object): object {
+  const result: { [key: string]: any } = {};
+
+  for (const key of Object.keys(obj).sort()) {
+    try {
+      const value = (obj as any)[key];
+
+      if (
+        typeof value === "object" &&
+        value !== null &&
+        !Array.isArray(value)
+      ) {
+        result[key] = getDeepProperties(value);
+      } else {
+        result[key] = value; // capturing the type of the property
+      }
+    } catch (error: any) {
+      result[key] = `Error: ${error.message}`;
+    }
   }
 
-  const commands = await vscode.commands.getCommands();
+  return result;
+}
 
-  // Sort commands ourselves to avoid false positives
-  const sortedCommands = commands.sort();
+export async function run(): Promise<void> {
+  assert(process.env.COMMAND_OUTPUT, "COMMAND_OUTPUT is required");
+  assert(process.env.API_OUTPUT, "API_OUTPUT is required");
 
-  writeCommandOutput(outputFile, {
-    version: vscode.version,
-    commands: sortedCommands,
-  });
+  const filesToCommit = [];
+
+  // Commands
+  const commandOutputFile = path.resolve(REPO_ROOT, process.env.COMMAND_OUTPUT);
+  const existingCommandOutput = parseCommandOutput(commandOutputFile);
+  if (existingCommandOutput.version !== vscode.version) {
+    const commands = await vscode.commands.getCommands();
+
+    // Sort commands ourselves to avoid false positives
+    const sortedCommands = commands.sort();
+
+    writeCommandOutput(commandOutputFile, {
+      version: vscode.version,
+      commands: sortedCommands,
+    });
+
+    filesToCommit.push(commandOutputFile);
+  }
+
+  // Api
+  const apiOutputFile = path.resolve(REPO_ROOT, process.env.API_OUTPUT);
+  const existingApiOuput = parseApiOutput(apiOutputFile);
+  if (existingApiOuput.version !== vscode.version) {
+    const vscodeProps = getDeepProperties(vscode);
+    writeApiOutput(apiOutputFile, {
+      version: vscode.version,
+      api: vscodeProps,
+    });
+    filesToCommit.push(apiOutputFile);
+  }
 
   // Commit files when running in CI
   if (process.env.CI) {
-    execFileSync("git", ["add", "--", outputFile]);
+    execFileSync("git", ["add", "--", ...filesToCommit]);
     execFileSync(
       "git",
       ["commit", "--message", `${process.env.OUTPUT_FILE} - ${vscode.version}`],

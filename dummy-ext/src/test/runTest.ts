@@ -12,14 +12,20 @@ async function main() {
       version: "stable",
       extensionDevelopmentPath,
       extensionTestsPath,
-      extensionTestsEnv: { OUTPUT_FILE: "commands-stable.json" },
+      extensionTestsEnv: {
+        COMMAND_OUTPUT: "commands-stable.json",
+        API_OUTPUT: "api-stable.json",
+      },
     });
 
     await runTests({
       version: "insiders",
       extensionDevelopmentPath,
       extensionTestsPath,
-      extensionTestsEnv: { OUTPUT_FILE: "commands-insiders.json" },
+      extensionTestsEnv: {
+        COMMAND_OUTPUT: "commands-insiders.json",
+        API_OUTPUT: "api-insiders.json",
+      },
     });
   } catch (err) {
     console.error("Failed to run tests", err);
