@@ -111,7 +111,7 @@ export async function run(): Promise<void> {
   }
 
   // Commit files when running in CI
-  if (process.env.CI) {
+  if (process.env.CI && filesToCommit.length > 0) {
     execFileSync("git", ["add", "--", ...filesToCommit]);
     execFileSync("git", ["commit", "--message", `${vscode.version}`], {
       env: {
