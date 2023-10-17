@@ -49,13 +49,17 @@ export async function run(): Promise<void> {
   // Commit files when running in CI
   if (process.env.CI) {
     execFileSync("git", ["add", "--", outputFile]);
-    execFileSync("git", ["commit", "--message", vscode.version], {
-      env: {
-        GIT_COMMITTER_NAME: "VS Code Tracker",
-        GIT_COMMITTER_EMAIL: "actions@github.com",
-        GIT_AUTHOR_NAME: "VS Code Tracker",
-        GIT_AUTHOR_EMAIL: "actions@github.com",
-      },
-    });
+    execFileSync(
+      "git",
+      ["commit", "--message", `${process.env.OUTPUT_FILE} - ${vscode.version}`],
+      {
+        env: {
+          GIT_COMMITTER_NAME: "VS Code Tracker",
+          GIT_COMMITTER_EMAIL: "actions@github.com",
+          GIT_AUTHOR_NAME: "VS Code Tracker",
+          GIT_AUTHOR_EMAIL: "actions@github.com",
+        },
+      }
+    );
   }
 }
