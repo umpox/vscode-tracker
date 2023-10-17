@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import * as path from "path";
-import { execFileSync } from "node:child_process";
 
 import { runTests } from "@vscode/test-electron";
 

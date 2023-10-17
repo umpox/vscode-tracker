@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import * as vscode from "vscode";
 import { execFileSync } from "node:child_process";
+import { readFileSync, writeFileSync } from "node:fs";
 import assert = require("assert");
+import path = require("node:path");
 
 // Must match the structure of `commands.json`
 export interface CommandOutput {
