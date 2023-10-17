@@ -16,7 +16,7 @@ async function main() {
     });
 
     await runTests({
-      version: "stable",
+      version: "insiders",
       extensionDevelopmentPath,
       extensionTestsPath,
       extensionTestsEnv: { OUTPUT_FILE: "commands-insiders.json" },
