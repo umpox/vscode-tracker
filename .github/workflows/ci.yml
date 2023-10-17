@@ -27,3 +27,8 @@ jobs:
           restore-keys: ${{ runner.os }}-pnpm-store-
       - run: pnpm install
       - run: pnpm run generate-commands
+      - name: Push changes to Git
+        run: |
+          git config --global user.name "VS Code Tracker"
+          git config --global user.email "actions@github.com"
+          git push

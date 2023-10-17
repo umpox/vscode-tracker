@@ -22,12 +22,6 @@ async function main() {
       extensionTestsPath,
       extensionTestsEnv: { OUTPUT_FILE: "commands-insiders.json" },
     });
-
-    // Push any changes to the repo in CI
-    if (process.env.CI) {
-      console.log("Pushing!");
-      execFileSync("git", ["push"]);
-    }
   } catch (err) {
     console.error("Failed to run tests", err);
     process.exit(1);
