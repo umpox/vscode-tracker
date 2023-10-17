@@ -41,9 +41,14 @@ export async function run(): Promise<void> {
     return;
   }
 
+  const commands = await vscode.commands.getCommands();
+
+  // Sort commands ourselves to avoid false positives
+  const sortedCommands = commands.sort();
+
   writeCommandOutput(outputFile, {
     version: vscode.version,
-    commands: await vscode.commands.getCommands(),
+    commands: sortedCommands,
   });
 
   // Commit files when running in CI
