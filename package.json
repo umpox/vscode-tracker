@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "vscode-tracker",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "^v20.4.0",
+    "pnpm": "^8.6.7"
+  },
+  "scripts": {
+    "generate-commands": "pnpm -C dummy-ext test"
+  },
+  "packageManager": "pnpm@8.6.7"
+}
