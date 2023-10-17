@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { writeFileSync } from "fs";
 import { readFileSync } from "fs";
+import { execFileSync } from "node:child_process";
 import assert = require("assert");
 
 import * as path from "path";
@@ -41,8 +42,18 @@ export async function run(): Promise<void> {
     return;
   }
 
-  return writeCommandOutput(outputFile, {
+  writeCommandOutput(outputFile, {
     version: vscode.version,
     commands: await vscode.commands.getCommands(),
+  });
+
+  execFileSync("git", ["add", "--", outputFile]);
+  execFileSync("git", ["commit", "--message", vscode.version], {
+    env: {
+      GIT_COMMITTER_NAME: "umpox",
+      GIT_COMMITTER_EMAIL: "tom@umpox.com",
+      GIT_AUTHOR_NAME: "umpox",
+      GIT_AUTHOR_EMAIL: "tom@umpox.com",
+    },
   });
 }
