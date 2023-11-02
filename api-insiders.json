@@ -1,5 +1,5 @@
 {
-  "version": "1.84.0-insider",
+  "version": "1.85.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -933,6 +933,7 @@
       "onDidChangeShell": "function",
       "onDidChangeTelemetryEnabled": "function",
       "openExternal": "function",
+      "registerIssueDataProvider": "function",
       "registerIssueUriRequestHandler": "function",
       "remoteName": "undefined",
       "sessionId": "string",
