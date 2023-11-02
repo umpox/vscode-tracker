@@ -1,5 +1,5 @@
 {
-  "version": "1.83.1",
+  "version": "1.84.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -15,6 +15,12 @@
       "None": "number",
       "Output": "number",
       "Process": "number"
+    },
+    "ChatAgentResultFeedbackKind": {
+      "0": "string",
+      "1": "string",
+      "Helpful": "number",
+      "Unhelpful": "number"
     },
     "ChatMessage": "function",
     "ChatMessageRole": {
@@ -369,8 +375,8 @@
       "Toolbar": "number"
     },
     "InteractiveSessionVoteDirection": {
+      "0": "string",
       "1": "string",
-      "2": "string",
       "Down": "number",
       "Up": "number"
     },
@@ -546,6 +552,16 @@
       "Error": "number",
       "Information": "number",
       "Warning": "number"
+    },
+    "SpeechToTextStatus": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "Recognized": "number",
+      "Recognizing": "number",
+      "Started": "number",
+      "Stopped": "number"
     },
     "StackFrameFocus": "function",
     "StandardTokenType": {
@@ -858,10 +874,10 @@
       "registerAuthenticationProvider": "function"
     },
     "chat": {
+      "createChatAgent": "function",
       "registerAgent": "function",
       "registerChatResponseProvider": "function",
       "registerMappedEditsProvider": "function",
-      "registerSlashCommand": "function",
       "registerVariable": "function",
       "requestChatAccess": "function"
     },
@@ -917,6 +933,7 @@
       "onDidChangeShell": "function",
       "onDidChangeTelemetryEnabled": "function",
       "openExternal": "function",
+      "registerIssueDataProvider": "function",
       "registerIssueUriRequestHandler": "function",
       "remoteName": "undefined",
       "sessionId": "string",
@@ -931,7 +948,6 @@
     },
     "interactive": {
       "_version": "number",
-      "addInteractiveRequest": "function",
       "registerInteractiveEditorSessionProvider": "function",
       "registerInteractiveSessionProvider": "function",
       "sendInteractiveRequestToProvider": "function",
@@ -996,6 +1012,9 @@
     "scm": {
       "createSourceControl": "function",
       "inputBox": "undefined"
+    },
+    "speech": {
+      "registerSpeechProvider": "function"
     },
     "tasks": {
       "executeTask": "function",
