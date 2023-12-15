@@ -1,5 +1,5 @@
 {
-  "version": "1.84.2",
+  "version": "1.85.1",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -16,6 +16,7 @@
       "Output": "number",
       "Process": "number"
     },
+    "ChatAgentCompletionItem": "function",
     "ChatAgentResultFeedbackKind": {
       "0": "string",
       "1": "string",
@@ -363,7 +364,9 @@
       "1": "string",
       "2": "string",
       "3": "string",
+      "4": "string",
       "Accepted": "number",
+      "Bug": "number",
       "Helpful": "number",
       "Undone": "number",
       "Unhelpful": "number"
@@ -406,6 +409,7 @@
     },
     "ManagedResolvedAuthority": "function",
     "MarkdownString": "function",
+    "MultiDocumentHighlight": "function",
     "NotebookCellData": "function",
     "NotebookCellExecutionState": {
       "1": "string",
@@ -459,6 +463,12 @@
     "NotebookKernelSourceAction": "function",
     "NotebookRange": "function",
     "NotebookRendererScript": "function",
+    "NotebookVariablesRequestKind": {
+      "1": "string",
+      "2": "string",
+      "Indexed": "number",
+      "Named": "number"
+    },
     "OverviewRulerLane": {
       "1": "string",
       "2": "string",
@@ -651,6 +661,7 @@
       "String": "number",
       "toString": "function"
     },
+    "TabInputChat": "function",
     "TabInputCustom": "function",
     "TabInputInteractiveWindow": "function",
     "TabInputNotebook": "function",
@@ -711,8 +722,8 @@
       "Top": "number"
     },
     "TerminalProfile": "function",
-    "TerminalQuickFixExecuteTerminalCommand": "function",
     "TerminalQuickFixOpener": "function",
+    "TerminalQuickFixTerminalCommand": "function",
     "TestMessage": "function",
     "TestMessage2": "function",
     "TestResultState": {
@@ -875,7 +886,6 @@
     },
     "chat": {
       "createChatAgent": "function",
-      "registerAgent": "function",
       "registerChatResponseProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerVariable": "function",
@@ -990,6 +1000,7 @@
       "registerInlineCompletionItemProvider": "function",
       "registerInlineValuesProvider": "function",
       "registerLinkedEditingRangeProvider": "function",
+      "registerMultiDocumentHighlightProvider": "function",
       "registerOnTypeFormattingEditProvider": "function",
       "registerReferenceProvider": "function",
       "registerRenameProvider": "function",
@@ -1011,7 +1022,8 @@
     },
     "scm": {
       "createSourceControl": "function",
-      "inputBox": "undefined"
+      "inputBox": "undefined",
+      "registerSourceControlInputBoxValueProvider": "function"
     },
     "speech": {
       "registerSpeechProvider": "function"
