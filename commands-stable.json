@@ -1,7 +1,7 @@
 {
-  "version": "1.85.1",
+  "version": "1.85.2",
   "commands": [
-    "__vsc19e45aa7-2ed8-4ae6-9086-e7882dd66011",
+    "__vsc067b88c1-de8e-4856-96dc-7e6787b8a1d0",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -1610,7 +1610,10 @@
     "workbench.action.openWorkspaceSettingsFile",
     "workbench.action.openYouTubeUrl",
     "workbench.action.output.show.editSessions",
+    "workbench.action.output.show.exthost",
     "workbench.action.output.show.main",
+    "workbench.action.output.show.notebook.rendering",
+    "workbench.action.output.show.remoteTunnelService",
     "workbench.action.output.show.rendererLog",
     "workbench.action.output.show.sharedprocess",
     "workbench.action.output.show.tasks",
