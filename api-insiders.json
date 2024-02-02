@@ -1,5 +1,5 @@
 {
-  "version": "1.86.0-insider",
+  "version": "1.87.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -192,6 +192,7 @@
       "MergeWithParent": "number",
       "Separate": "number"
     },
+    "DebugVisualization": "function",
     "DecorationRangeBehavior": {
       "0": "string",
       "1": "string",
@@ -382,6 +383,12 @@
       "1": "string",
       "Down": "number",
       "Up": "number"
+    },
+    "KeywordRecognitionStatus": {
+      "1": "string",
+      "2": "string",
+      "Recognized": "number",
+      "Stopped": "number"
     },
     "LanguageStatusSeverity": {
       "0": "string",
@@ -783,6 +790,8 @@
       "0": "string",
       "1": "string",
       "2": "string",
+      "3": "string",
+      "Interval": "number",
       "Off": "number",
       "On": "number",
       "Relative": "number"
@@ -919,6 +928,7 @@
       "registerDebugAdapterDescriptorFactory": "function",
       "registerDebugAdapterTrackerFactory": "function",
       "registerDebugConfigurationProvider": "function",
+      "registerDebugVisualizationProvider": "function",
       "removeBreakpoints": "function",
       "stackFrameFocus": "undefined",
       "startDebugging": "function",
