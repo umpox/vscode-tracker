@@ -1,5 +1,5 @@
 {
-  "version": "1.85.2",
+  "version": "1.86.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -17,6 +17,12 @@
       "Process": "number"
     },
     "ChatAgentCompletionItem": "function",
+    "ChatAgentCopyKind": {
+      "1": "string",
+      "2": "string",
+      "Action": "number",
+      "Toolbar": "number"
+    },
     "ChatAgentResultFeedbackKind": {
       "0": "string",
       "1": "string",
@@ -186,6 +192,7 @@
       "MergeWithParent": "number",
       "Separate": "number"
     },
+    "DebugVisualization": "function",
     "DecorationRangeBehavior": {
       "0": "string",
       "1": "string",
@@ -371,17 +378,17 @@
       "Undone": "number",
       "Unhelpful": "number"
     },
-    "InteractiveSessionCopyKind": {
-      "1": "string",
-      "2": "string",
-      "Action": "number",
-      "Toolbar": "number"
-    },
     "InteractiveSessionVoteDirection": {
       "0": "string",
       "1": "string",
       "Down": "number",
       "Up": "number"
+    },
+    "KeywordRecognitionStatus": {
+      "1": "string",
+      "2": "string",
+      "Recognized": "number",
+      "Stopped": "number"
     },
     "LanguageStatusSeverity": {
       "0": "string",
@@ -919,6 +926,7 @@
       "registerDebugAdapterDescriptorFactory": "function",
       "registerDebugAdapterTrackerFactory": "function",
       "registerDebugConfigurationProvider": "function",
+      "registerDebugVisualizationProvider": "function",
       "removeBreakpoints": "function",
       "stackFrameFocus": "undefined",
       "startDebugging": "function",
@@ -1022,8 +1030,7 @@
     },
     "scm": {
       "createSourceControl": "function",
-      "inputBox": "undefined",
-      "registerSourceControlInputBoxValueProvider": "function"
+      "inputBox": "undefined"
     },
     "speech": {
       "registerSpeechProvider": "function"
