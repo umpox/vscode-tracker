@@ -1,5 +1,5 @@
 {
-  "version": "1.86.0",
+  "version": "1.86.1",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
