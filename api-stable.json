@@ -1,5 +1,5 @@
 {
-  "version": "1.86.2",
+  "version": "1.87.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -16,29 +16,26 @@
       "Output": "number",
       "Process": "number"
     },
-    "ChatAgentCompletionItem": "function",
-    "ChatAgentCopyKind": {
+    "ChatCompletionItem": "function",
+    "ChatCopyKind": {
       "1": "string",
       "2": "string",
       "Action": "number",
       "Toolbar": "number"
     },
-    "ChatAgentResultFeedbackKind": {
+    "ChatRequestTurn": "function",
+    "ChatResponseAnchorPart": "function",
+    "ChatResponseCommandButtonPart": "function",
+    "ChatResponseFileTreePart": "function",
+    "ChatResponseMarkdownPart": "function",
+    "ChatResponseProgressPart": "function",
+    "ChatResponseReferencePart": "function",
+    "ChatResponseTurn": "function",
+    "ChatResultFeedbackKind": {
       "0": "string",
       "1": "string",
       "Helpful": "number",
       "Unhelpful": "number"
-    },
-    "ChatMessage": "function",
-    "ChatMessageRole": {
-      "0": "string",
-      "1": "string",
-      "2": "string",
-      "3": "string",
-      "Assistant": "number",
-      "Function": "number",
-      "System": "number",
-      "User": "number"
     },
     "ChatVariableLevel": {
       "1": "string",
@@ -193,6 +190,7 @@
       "Separate": "number"
     },
     "DebugVisualization": "function",
+    "DeclarationCoverage": "function",
     "DecorationRangeBehavior": {
       "0": "string",
       "1": "string",
@@ -355,6 +353,13 @@
       "Automatic": "number",
       "Invoke": "number"
     },
+    "InlineEdit": "function",
+    "InlineEditTriggerKind": {
+      "0": "string",
+      "1": "string",
+      "Automatic": "number",
+      "Invoke": "number"
+    },
     "InlineValueEvaluatableExpression": "function",
     "InlineValueText": "function",
     "InlineValueVariableLookup": "function",
@@ -390,6 +395,9 @@
       "Recognized": "number",
       "Stopped": "number"
     },
+    "LanguageModelAssistantMessage": "function",
+    "LanguageModelSystemMessage": "function",
+    "LanguageModelUserMessage": "function",
     "LanguageStatusSeverity": {
       "0": "string",
       "1": "string",
@@ -417,6 +425,11 @@
     "ManagedResolvedAuthority": "function",
     "MarkdownString": "function",
     "MultiDocumentHighlight": "function",
+    "NewSymbolName": "function",
+    "NewSymbolNameTag": {
+      "1": "string",
+      "AIGenerated": "number"
+    },
     "NotebookCellData": "function",
     "NotebookCellExecutionState": {
       "1": "string",
@@ -732,7 +745,6 @@
     "TerminalQuickFixOpener": "function",
     "TerminalQuickFixTerminalCommand": "function",
     "TestMessage": "function",
-    "TestMessage2": "function",
     "TestResultState": {
       "1": "string",
       "2": "string",
@@ -790,6 +802,8 @@
       "0": "string",
       "1": "string",
       "2": "string",
+      "3": "string",
+      "Interval": "number",
       "Off": "number",
       "On": "number",
       "Relative": "number"
@@ -892,11 +906,10 @@
       "registerAuthenticationProvider": "function"
     },
     "chat": {
-      "createChatAgent": "function",
+      "createChatParticipant": "function",
       "registerChatResponseProvider": "function",
-      "registerMappedEditsProvider": "function",
-      "registerVariable": "function",
-      "requestChatAccess": "function"
+      "registerChatVariableResolver": "function",
+      "registerMappedEditsProvider": "function"
     },
     "commands": {
       "executeCommand": "function",
@@ -927,6 +940,7 @@
       "registerDebugAdapterTrackerFactory": "function",
       "registerDebugConfigurationProvider": "function",
       "registerDebugVisualizationProvider": "function",
+      "registerDebugVisualizationTreeProvider": "function",
       "removeBreakpoints": "function",
       "stackFrameFocus": "undefined",
       "startDebugging": "function",
@@ -1006,9 +1020,11 @@
       "registerImplementationProvider": "function",
       "registerInlayHintsProvider": "function",
       "registerInlineCompletionItemProvider": "function",
+      "registerInlineEditProvider": "function",
       "registerInlineValuesProvider": "function",
       "registerLinkedEditingRangeProvider": "function",
       "registerMultiDocumentHighlightProvider": "function",
+      "registerNewSymbolNamesProvider": "function",
       "registerOnTypeFormattingEditProvider": "function",
       "registerReferenceProvider": "function",
       "registerRenameProvider": "function",
@@ -1019,6 +1035,10 @@
       "registerWorkspaceSymbolProvider": "function",
       "setLanguageConfiguration": "function",
       "setTextDocumentLanguage": "function"
+    },
+    "lm": {
+      "onDidChangeLanguageModels": "function",
+      "requestLanguageModelAccess": "function"
     },
     "notebooks": {
       "createNotebookController": "function",
@@ -1136,6 +1156,7 @@
       "asRelativePath": "function",
       "createFileSystemWatcher": "function",
       "findFiles": "function",
+      "findFiles2": "function",
       "findTextInFiles": "function",
       "fs": {
         "copy": "function",
