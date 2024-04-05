@@ -1,5 +1,5 @@
 {
-  "version": "1.88.0-insider",
+  "version": "1.89.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -23,6 +23,16 @@
       "Action": "number",
       "Toolbar": "number"
     },
+    "ChatLocation": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "Editor": "number",
+      "Notebook": "number",
+      "Panel": "number",
+      "Terminal": "number"
+    },
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCommandButtonPart": "function",
@@ -30,6 +40,7 @@
     "ChatResponseMarkdownPart": "function",
     "ChatResponseProgressPart": "function",
     "ChatResponseReferencePart": "function",
+    "ChatResponseTextEditPart": "function",
     "ChatResponseTurn": "function",
     "ChatResultFeedbackKind": {
       "0": "string",
@@ -78,6 +89,12 @@
       "1": "string",
       "Draft": "number",
       "Published": "number"
+    },
+    "CommentThreadApplicability": {
+      "0": "string",
+      "1": "string",
+      "Current": "number",
+      "Outdated": "number"
     },
     "CommentThreadCollapsibleState": {
       "0": "string",
@@ -169,7 +186,6 @@
       "Workspace": "number",
       "WorkspaceFolder": "number"
     },
-    "CoveredCount": "function",
     "CustomExecution": "function",
     "DataTransfer": "function",
     "DataTransferItem": "function",
@@ -232,6 +248,13 @@
     },
     "DocumentLink": "function",
     "DocumentPasteEdit": "function",
+    "DocumentPasteEditKind": "function",
+    "DocumentPasteTriggerKind": {
+      "0": "string",
+      "1": "string",
+      "Automatic": "number",
+      "PasteAs": "number"
+    },
     "DocumentSymbol": "function",
     "EditSessionIdentityMatch": {
       "0": "string",
@@ -504,6 +527,16 @@
       "Right": "number"
     },
     "ParameterInformation": "function",
+    "PartialAcceptTriggerKind": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Line": "number",
+      "Suggest": "number",
+      "Unknown": "number",
+      "Word": "number"
+    },
     "PortAttributes": "function",
     "PortAutoForwardAction": {
       "1": "string",
@@ -592,12 +625,14 @@
       "2": "string",
       "3": "string",
       "4": "string",
+      "5": "string",
+      "Error": "number",
       "Recognized": "number",
       "Recognizing": "number",
       "Started": "number",
       "Stopped": "number"
     },
-    "StackFrameFocus": "function",
+    "StackFrame": "function",
     "StandardTokenType": {
       "0": "string",
       "1": "string",
@@ -694,6 +729,7 @@
     "TabInputText": "function",
     "TabInputTextDiff": "function",
     "TabInputTextMerge": "function",
+    "TabInputTextMultiDiff": "function",
     "TabInputWebview": "function",
     "Task": "function",
     "TaskGroup": "function",
@@ -748,6 +784,7 @@
     "TerminalProfile": "function",
     "TerminalQuickFixOpener": "function",
     "TerminalQuickFixTerminalCommand": "function",
+    "TestCoverageCount": "function",
     "TestMessage": "function",
     "TestResultState": {
       "1": "string",
@@ -839,7 +876,7 @@
     },
     "ThemeColor": "function",
     "ThemeIcon": "function",
-    "ThreadFocus": "function",
+    "Thread": "function",
     "TimelineItem": "function",
     "TreeItem": "function",
     "TreeItemCheckboxState": {
@@ -911,6 +948,7 @@
     },
     "chat": {
       "createChatParticipant": "function",
+      "createDynamicChatParticipant": "function",
       "registerChatResponseProvider": "function",
       "registerChatVariableResolver": "function",
       "registerMappedEditsProvider": "function"
@@ -931,12 +969,13 @@
         "appendLine": "function"
       },
       "activeDebugSession": "undefined",
+      "activeStackItem": "undefined",
       "addBreakpoints": "function",
       "asDebugSourceUri": "function",
       "breakpoints": "object",
       "onDidChangeActiveDebugSession": "function",
+      "onDidChangeActiveStackItem": "function",
       "onDidChangeBreakpoints": "function",
-      "onDidChangeStackFrameFocus": "function",
       "onDidReceiveDebugSessionCustomEvent": "function",
       "onDidStartDebugSession": "function",
       "onDidTerminateDebugSession": "function",
@@ -946,7 +985,6 @@
       "registerDebugVisualizationProvider": "function",
       "registerDebugVisualizationTreeProvider": "function",
       "removeBreakpoints": "function",
-      "stackFrameFocus": "undefined",
       "startDebugging": "function",
       "stopDebugging": "function"
     },
@@ -969,8 +1007,6 @@
       "onDidChangeShell": "function",
       "onDidChangeTelemetryEnabled": "function",
       "openExternal": "function",
-      "registerIssueDataProvider": "function",
-      "registerIssueUriRequestHandler": "function",
       "remoteName": "undefined",
       "sessionId": "string",
       "shell": "string",
@@ -986,8 +1022,7 @@
       "_version": "number",
       "registerInteractiveEditorSessionProvider": "function",
       "registerInteractiveSessionProvider": "function",
-      "sendInteractiveRequestToProvider": "function",
-      "transferChatSession": "function"
+      "transferActiveChat": "function"
     },
     "l10n": {
       "bundle": "undefined",
@@ -1098,6 +1133,7 @@
       "onDidChangeNotebookEditorSelection": "function",
       "onDidChangeNotebookEditorVisibleRanges": "function",
       "onDidChangeTerminalDimensions": "function",
+      "onDidChangeTerminalShellIntegration": "function",
       "onDidChangeTerminalState": "function",
       "onDidChangeTextEditorOptions": "function",
       "onDidChangeTextEditorSelection": "function",
@@ -1107,8 +1143,10 @@
       "onDidChangeVisibleTextEditors": "function",
       "onDidChangeWindowState": "function",
       "onDidCloseTerminal": "function",
+      "onDidEndTerminalShellExecution": "function",
       "onDidExecuteTerminalCommand": "function",
       "onDidOpenTerminal": "function",
+      "onDidStartTerminalShellExecution": "function",
       "onDidWriteTerminalData": "function",
       "registerCustomEditorProvider": "function",
       "registerExternalUriOpener": "function",
