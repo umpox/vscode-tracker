@@ -1,5 +1,5 @@
 {
-  "version": "1.89.0-insider",
+  "version": "1.90.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -12,6 +12,8 @@
       "0": "string",
       "1": "string",
       "2": "string",
+      "3": "string",
+      "Hybrid": "number",
       "None": "number",
       "Output": "number",
       "Process": "number"
@@ -36,12 +38,15 @@
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCommandButtonPart": "function",
+    "ChatResponseDetectedParticipantPart": "function",
     "ChatResponseFileTreePart": "function",
     "ChatResponseMarkdownPart": "function",
+    "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseProgressPart": "function",
     "ChatResponseReferencePart": "function",
     "ChatResponseTextEditPart": "function",
     "ChatResponseTurn": "function",
+    "ChatResponseWarningPart": "function",
     "ChatResultFeedbackKind": {
       "0": "string",
       "1": "string",
@@ -205,6 +210,8 @@
       "MergeWithParent": "number",
       "Separate": "number"
     },
+    "DebugStackFrame": "function",
+    "DebugThread": "function",
     "DebugVisualization": "function",
     "DeclarationCoverage": "function",
     "DecorationRangeBehavior": {
@@ -237,6 +244,7 @@
     },
     "Disposable": "function",
     "DocumentDropEdit": "function",
+    "DocumentDropOrPasteEditKind": "function",
     "DocumentHighlight": "function",
     "DocumentHighlightKind": {
       "0": "string",
@@ -248,7 +256,6 @@
     },
     "DocumentLink": "function",
     "DocumentPasteEdit": "function",
-    "DocumentPasteEditKind": "function",
     "DocumentPasteTriggerKind": {
       "0": "string",
       "1": "string",
@@ -348,8 +355,13 @@
       "Region": "number"
     },
     "FunctionBreakpoint": "function",
-    "FunctionCoverage": "function",
     "Hover": "function",
+    "HoverVerbosityAction": {
+      "0": "string",
+      "1": "string",
+      "Decrease": "number",
+      "Increase": "number"
+    },
     "IndentAction": {
       "0": "string",
       "1": "string",
@@ -456,6 +468,12 @@
     "NewSymbolNameTag": {
       "1": "string",
       "AIGenerated": "number"
+    },
+    "NewSymbolNameTriggerKind": {
+      "0": "string",
+      "1": "string",
+      "Automatic": "number",
+      "Invoke": "number"
     },
     "NotebookCellData": "function",
     "NotebookCellExecutionState": {
@@ -632,7 +650,6 @@
       "Started": "number",
       "Stopped": "number"
     },
-    "StackFrame": "function",
     "StandardTokenType": {
       "0": "string",
       "1": "string",
@@ -784,6 +801,14 @@
     "TerminalProfile": "function",
     "TerminalQuickFixOpener": "function",
     "TerminalQuickFixTerminalCommand": "function",
+    "TerminalShellExecutionCommandLineConfidence": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "High": "number",
+      "Low": "number",
+      "Medium": "number"
+    },
     "TestCoverageCount": "function",
     "TestMessage": "function",
     "TestResultState": {
@@ -809,6 +834,7 @@
       "Run": "number"
     },
     "TestRunRequest": "function",
+    "TestRunRequest2": "function",
     "TestTag": "function",
     "TextDocumentChangeReason": {
       "1": "string",
@@ -874,9 +900,16 @@
       "Information": "number",
       "Warning": "number"
     },
+    "TextToSpeechStatus": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Error": "number",
+      "Started": "number",
+      "Stopped": "number"
+    },
     "ThemeColor": "function",
     "ThemeIcon": "function",
-    "Thread": "function",
     "TimelineItem": "function",
     "TreeItem": "function",
     "TreeItemCheckboxState": {
@@ -901,6 +934,7 @@
       "Web": "number"
     },
     "Uri": "function",
+    "VerboseHover": "function",
     "ViewColumn": {
       "1": "string",
       "2": "string",
@@ -1021,7 +1055,6 @@
     "interactive": {
       "_version": "number",
       "registerInteractiveEditorSessionProvider": "function",
-      "registerInteractiveSessionProvider": "function",
       "transferActiveChat": "function"
     },
     "l10n": {
@@ -1076,6 +1109,8 @@
       "setTextDocumentLanguage": "function"
     },
     "lm": {
+      "computeTokenLength": "function",
+      "getLanguageModelInformation": "function",
       "onDidChangeLanguageModels": "function",
       "sendChatRequest": "function"
     },
@@ -1173,6 +1208,7 @@
       "showWarningMessage": "function",
       "showWorkspaceFolderPick": "function",
       "state": {
+        "active": "boolean",
         "focused": "boolean"
       },
       "tabGroups": {
