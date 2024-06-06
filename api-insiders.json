@@ -1,5 +1,5 @@
 {
-  "version": "1.90.0-insider",
+  "version": "1.91.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -38,11 +38,13 @@
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCommandButtonPart": "function",
+    "ChatResponseConfirmationPart": "function",
     "ChatResponseDetectedParticipantPart": "function",
     "ChatResponseFileTreePart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseProgressPart": "function",
+    "ChatResponseProgressPart2": "function",
     "ChatResponseReferencePart": "function",
     "ChatResponseTextEditPart": "function",
     "ChatResponseTurn": "function",
@@ -326,6 +328,7 @@
       "Deleted": "number"
     },
     "FileCoverage": "function",
+    "FileCoverage2": "function",
     "FileDecoration": "function",
     "FileDecoration2": "function",
     "FilePermission": {
@@ -430,13 +433,23 @@
       "Recognized": "number",
       "Stopped": "number"
     },
-    "LanguageModelAssistantMessage": "function",
     "LanguageModelChatAssistantMessage": "function",
+    "LanguageModelChatMessage": "function",
+    "LanguageModelChatMessage2": "function",
+    "LanguageModelChatMessageFunctionResultPart": "function",
+    "LanguageModelChatMessageRole": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Assistant": "number",
+      "System": "number",
+      "User": "number"
+    },
+    "LanguageModelChatResponseFunctionUsePart": "function",
+    "LanguageModelChatResponseTextPart": "function",
     "LanguageModelChatSystemMessage": "function",
     "LanguageModelChatUserMessage": "function",
     "LanguageModelError": "function",
-    "LanguageModelSystemMessage": "function",
-    "LanguageModelUserMessage": "function",
     "LanguageStatusSeverity": {
       "0": "string",
       "1": "string",
@@ -834,7 +847,6 @@
       "Run": "number"
     },
     "TestRunRequest": "function",
-    "TestRunRequest2": "function",
     "TestTag": "function",
     "TextDocumentChangeReason": {
       "1": "string",
@@ -981,6 +993,7 @@
       "registerAuthenticationProvider": "function"
     },
     "chat": {
+      "_version": "number",
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
       "registerChatResponseProvider": "function",
@@ -1054,7 +1067,6 @@
     },
     "interactive": {
       "_version": "number",
-      "registerInteractiveEditorSessionProvider": "function",
       "transferActiveChat": "function"
     },
     "l10n": {
@@ -1109,10 +1121,12 @@
       "setTextDocumentLanguage": "function"
     },
     "lm": {
-      "computeTokenLength": "function",
-      "getLanguageModelInformation": "function",
-      "onDidChangeLanguageModels": "function",
-      "sendChatRequest": "function"
+      "computeEmbeddings": "function",
+      "onDidChangeChatModels": "function",
+      "onDidChangeEmbeddingModels": "function",
+      "registerChatModelProvider": "function",
+      "registerEmbeddingsProvider": "function",
+      "selectChatModels": "function"
     },
     "notebooks": {
       "createNotebookController": "function",
@@ -1142,6 +1156,7 @@
     "tests": {
       "createTestController": "function",
       "createTestObserver": "function",
+      "registerTestFollowupProvider": "function",
       "runTests": "function"
     },
     "version": "string",
