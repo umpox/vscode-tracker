@@ -1,5 +1,5 @@
 {
-  "version": "1.90.2",
+  "version": "1.91.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -436,6 +436,7 @@
     "LanguageModelChatAssistantMessage": "function",
     "LanguageModelChatMessage": "function",
     "LanguageModelChatMessage2": "function",
+    "LanguageModelChatMessageFunctionResultPart": "function",
     "LanguageModelChatMessageRole": {
       "1": "string",
       "2": "string",
@@ -444,6 +445,8 @@
       "System": "number",
       "User": "number"
     },
+    "LanguageModelChatResponseFunctionUsePart": "function",
+    "LanguageModelChatResponseTextPart": "function",
     "LanguageModelChatSystemMessage": "function",
     "LanguageModelChatUserMessage": "function",
     "LanguageModelError": "function",
@@ -983,15 +986,14 @@
       "registerRelatedInformationProvider": "function"
     },
     "authentication": {
+      "getAccounts": "function",
       "getSession": "function",
-      "getSessions": "function",
       "hasSession": "function",
       "onDidChangeSessions": "function",
       "registerAuthenticationProvider": "function"
     },
     "chat": {
       "_version": "number",
-      "attachContext": "function",
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
       "registerChatResponseProvider": "function",
@@ -1120,9 +1122,12 @@
     },
     "lm": {
       "computeEmbeddings": "function",
+      "invokeTool": "function",
       "onDidChangeChatModels": "function",
       "onDidChangeEmbeddingModels": "function",
+      "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
+      "registerTool": "function",
       "selectChatModels": "function"
     },
     "notebooks": {
