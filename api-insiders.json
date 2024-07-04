@@ -1,5 +1,5 @@
 {
-  "version": "1.91.0-insider",
+  "version": "1.92.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -35,6 +35,8 @@
       "Panel": "number",
       "Terminal": "number"
     },
+    "ChatRequestEditorData": "function",
+    "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCommandButtonPart": "function",
@@ -433,9 +435,7 @@
       "Recognized": "number",
       "Stopped": "number"
     },
-    "LanguageModelChatAssistantMessage": "function",
     "LanguageModelChatMessage": "function",
-    "LanguageModelChatMessage2": "function",
     "LanguageModelChatMessageFunctionResultPart": "function",
     "LanguageModelChatMessageRole": {
       "1": "string",
@@ -447,8 +447,6 @@
     },
     "LanguageModelChatResponseFunctionUsePart": "function",
     "LanguageModelChatResponseTextPart": "function",
-    "LanguageModelChatSystemMessage": "function",
-    "LanguageModelChatUserMessage": "function",
     "LanguageModelError": "function",
     "LanguageStatusSeverity": {
       "0": "string",
@@ -986,8 +984,8 @@
       "registerRelatedInformationProvider": "function"
     },
     "authentication": {
+      "getAccounts": "function",
       "getSession": "function",
-      "getSessions": "function",
       "hasSession": "function",
       "onDidChangeSessions": "function",
       "registerAuthenticationProvider": "function"
@@ -1122,10 +1120,12 @@
     },
     "lm": {
       "computeEmbeddings": "function",
+      "invokeTool": "function",
       "onDidChangeChatModels": "function",
       "onDidChangeEmbeddingModels": "function",
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
+      "registerTool": "function",
       "selectChatModels": "function"
     },
     "notebooks": {
