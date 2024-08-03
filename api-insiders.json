@@ -1,5 +1,5 @@
 {
-  "version": "1.92.0-insider",
+  "version": "1.93.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -39,6 +39,7 @@
     "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
+    "ChatResponseCodeCitationPart": "function",
     "ChatResponseCommandButtonPart": "function",
     "ChatResponseConfirmationPart": "function",
     "ChatResponseDetectedParticipantPart": "function",
@@ -48,6 +49,15 @@
     "ChatResponseProgressPart": "function",
     "ChatResponseProgressPart2": "function",
     "ChatResponseReferencePart": "function",
+    "ChatResponseReferencePart2": "function",
+    "ChatResponseReferencePartStatusKind": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Complete": "number",
+      "Omitted": "number",
+      "Partial": "number"
+    },
     "ChatResponseTextEditPart": "function",
     "ChatResponseTurn": "function",
     "ChatResponseWarningPart": "function",
@@ -110,6 +120,12 @@
       "1": "string",
       "Collapsed": "number",
       "Expanded": "number"
+    },
+    "CommentThreadFocus": {
+      "1": "string",
+      "2": "string",
+      "Comment": "number",
+      "Reply": "number"
     },
     "CommentThreadState": {
       "0": "string",
@@ -291,6 +307,14 @@
     },
     "EvaluatableExpression": "function",
     "EventEmitter": "function",
+    "ExcludeSettingOptions": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "FilesExclude": "number",
+      "None": "number",
+      "SearchAndFilesExclude": "number"
+    },
     "ExtensionKind": {
       "1": "string",
       "2": "string",
@@ -591,6 +615,12 @@
       "SourceControl": "number",
       "Window": "number"
     },
+    "QuickInputButtonLocation": {
+      "1": "string",
+      "2": "string",
+      "Inline": "number",
+      "Title": "number"
+    },
     "QuickInputButtons": "function",
     "QuickPickItemKind": {
       "0": "string",
@@ -822,6 +852,8 @@
     },
     "TestCoverageCount": "function",
     "TestMessage": "function",
+    "TestMessage2": "function",
+    "TestMessageStackFrame": "function",
     "TestResultState": {
       "1": "string",
       "2": "string",
@@ -910,6 +942,14 @@
       "Information": "number",
       "Warning": "number"
     },
+    "TextSearchCompleteMessageTypeNew": {
+      "1": "string",
+      "2": "string",
+      "Information": "number",
+      "Warning": "number"
+    },
+    "TextSearchContextNew": "function",
+    "TextSearchMatchNew": "function",
     "TextToSpeechStatus": {
       "1": "string",
       "2": "string",
@@ -1250,7 +1290,9 @@
       "createFileSystemWatcher": "function",
       "findFiles": "function",
       "findFiles2": "function",
+      "findFiles2New": "function",
       "findTextInFiles": "function",
+      "findTextInFilesNew": "function",
       "fs": {
         "copy": "function",
         "createDirectory": "function",
@@ -1294,9 +1336,11 @@
       "openTextDocument": "function",
       "openTunnel": "function",
       "registerAITextSearchProvider": "function",
+      "registerAITextSearchProviderNew": "function",
       "registerCanonicalUriProvider": "function",
       "registerEditSessionIdentityProvider": "function",
       "registerFileSearchProvider": "function",
+      "registerFileSearchProviderNew": "function",
       "registerFileSystemProvider": "function",
       "registerNotebookSerializer": "function",
       "registerPortAttributesProvider": "function",
@@ -1305,6 +1349,7 @@
       "registerTaskProvider": "function",
       "registerTextDocumentContentProvider": "function",
       "registerTextSearchProvider": "function",
+      "registerTextSearchProviderNew": "function",
       "registerTimelineProvider": "function",
       "registerTunnelProvider": "function",
       "requestWorkspaceTrust": "function",
