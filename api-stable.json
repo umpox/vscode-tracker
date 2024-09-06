@@ -1,5 +1,5 @@
 {
-  "version": "1.92.2",
+  "version": "1.93.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -46,6 +46,7 @@
     "ChatResponseFileTreePart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
+    "ChatResponseMovePart": "function",
     "ChatResponseProgressPart": "function",
     "ChatResponseProgressPart2": "function",
     "ChatResponseReferencePart": "function",
@@ -311,9 +312,9 @@
       "1": "string",
       "2": "string",
       "3": "string",
-      "filesExclude": "number",
-      "none": "number",
-      "searchAndFilesExclude": "number"
+      "FilesExclude": "number",
+      "None": "number",
+      "SearchAndFilesExclude": "number"
     },
     "ExtensionKind": {
       "1": "string",
@@ -460,7 +461,6 @@
       "Stopped": "number"
     },
     "LanguageModelChatMessage": "function",
-    "LanguageModelChatMessageFunctionResultPart": "function",
     "LanguageModelChatMessageRole": {
       "1": "string",
       "2": "string",
@@ -469,8 +469,9 @@
       "System": "number",
       "User": "number"
     },
-    "LanguageModelChatResponseFunctionUsePart": "function",
+    "LanguageModelChatMessageToolResultPart": "function",
     "LanguageModelChatResponseTextPart": "function",
+    "LanguageModelChatResponseToolCallPart": "function",
     "LanguageModelError": "function",
     "LanguageStatusSeverity": {
       "0": "string",
@@ -852,7 +853,6 @@
     },
     "TestCoverageCount": "function",
     "TestMessage": "function",
-    "TestMessage2": "function",
     "TestMessageStackFrame": "function",
     "TestResultState": {
       "1": "string",
@@ -1031,9 +1031,9 @@
       "registerAuthenticationProvider": "function"
     },
     "chat": {
-      "_version": "number",
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
+      "registerChatParticipantDetectionProvider": "function",
       "registerChatResponseProvider": "function",
       "registerChatVariableResolver": "function",
       "registerMappedEditsProvider": "function"
@@ -1104,7 +1104,6 @@
       "onDidChange": "function"
     },
     "interactive": {
-      "_version": "number",
       "transferActiveChat": "function"
     },
     "l10n": {
