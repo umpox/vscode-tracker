@@ -1,5 +1,5 @@
 {
-  "version": "1.93.1",
+  "version": "1.94.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -40,6 +40,7 @@
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCodeCitationPart": "function",
+    "ChatResponseCodeblockUriPart": "function",
     "ChatResponseCommandButtonPart": "function",
     "ChatResponseConfirmationPart": "function",
     "ChatResponseDetectedParticipantPart": "function",
@@ -1036,7 +1037,8 @@
       "registerChatParticipantDetectionProvider": "function",
       "registerChatResponseProvider": "function",
       "registerChatVariableResolver": "function",
-      "registerMappedEditsProvider": "function"
+      "registerMappedEditsProvider": "function",
+      "registerMappedEditsProvider2": "function"
     },
     "commands": {
       "executeCommand": "function",
