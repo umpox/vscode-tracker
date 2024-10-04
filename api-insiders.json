@@ -1,5 +1,5 @@
 {
-  "version": "1.94.0-insider",
+  "version": "1.95.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -30,16 +30,20 @@
       "2": "string",
       "3": "string",
       "4": "string",
+      "5": "string",
+      "EditingSession": "number",
       "Editor": "number",
       "Notebook": "number",
       "Panel": "number",
       "Terminal": "number"
     },
+    "ChatReferenceBinaryData": "function",
     "ChatRequestEditorData": "function",
     "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCodeCitationPart": "function",
+    "ChatResponseCodeblockUriPart": "function",
     "ChatResponseCommandButtonPart": "function",
     "ChatResponseConfirmationPart": "function",
     "ChatResponseDetectedParticipantPart": "function",
@@ -1036,7 +1040,8 @@
       "registerChatParticipantDetectionProvider": "function",
       "registerChatResponseProvider": "function",
       "registerChatVariableResolver": "function",
-      "registerMappedEditsProvider": "function"
+      "registerMappedEditsProvider": "function",
+      "registerMappedEditsProvider2": "function"
     },
     "commands": {
       "executeCommand": "function",
