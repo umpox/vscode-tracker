@@ -1,5 +1,5 @@
 {
-  "version": "1.95.0-insider",
+  "version": "1.96.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -24,6 +24,12 @@
       "2": "string",
       "Action": "number",
       "Toolbar": "number"
+    },
+    "ChatEditingSessionActionOutcome": {
+      "1": "string",
+      "2": "string",
+      "Accepted": "number",
+      "Rejected": "number"
     },
     "ChatLocation": {
       "1": "string",
@@ -473,10 +479,18 @@
       "System": "number",
       "User": "number"
     },
-    "LanguageModelChatMessageToolResultPart": "function",
-    "LanguageModelChatResponseTextPart": "function",
-    "LanguageModelChatResponseToolCallPart": "function",
+    "LanguageModelChatToolMode": {
+      "1": "string",
+      "2": "string",
+      "Auto": "number",
+      "Required": "number"
+    },
     "LanguageModelError": "function",
+    "LanguageModelPromptTsxPart": "function",
+    "LanguageModelTextPart": "function",
+    "LanguageModelToolCallPart": "function",
+    "LanguageModelToolResult": "function",
+    "LanguageModelToolResultPart": "function",
     "LanguageStatusSeverity": {
       "0": "string",
       "1": "string",
@@ -952,8 +966,8 @@
       "Information": "number",
       "Warning": "number"
     },
-    "TextSearchContextNew": "function",
-    "TextSearchMatchNew": "function",
+    "TextSearchContext2": "function",
+    "TextSearchMatch2": "function",
     "TextToSpeechStatus": {
       "1": "string",
       "2": "string",
@@ -1164,13 +1178,16 @@
     },
     "lm": {
       "computeEmbeddings": "function",
+      "fileIsIgnored": "function",
       "invokeTool": "function",
       "onDidChangeChatModels": "function",
       "onDidChangeEmbeddingModels": "function",
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
+      "registerIgnoredFileProvider": "function",
       "registerTool": "function",
-      "selectChatModels": "function"
+      "selectChatModels": "function",
+      "tools": "object"
     },
     "notebooks": {
       "createNotebookController": "function",
@@ -1296,7 +1313,7 @@
       "findFiles2": "function",
       "findFiles2New": "function",
       "findTextInFiles": "function",
-      "findTextInFilesNew": "function",
+      "findTextInFiles2": "function",
       "fs": {
         "copy": "function",
         "createDirectory": "function",
@@ -1340,11 +1357,11 @@
       "openTextDocument": "function",
       "openTunnel": "function",
       "registerAITextSearchProvider": "function",
-      "registerAITextSearchProviderNew": "function",
+      "registerAITextSearchProvider2": "function",
       "registerCanonicalUriProvider": "function",
       "registerEditSessionIdentityProvider": "function",
       "registerFileSearchProvider": "function",
-      "registerFileSearchProviderNew": "function",
+      "registerFileSearchProvider2": "function",
       "registerFileSystemProvider": "function",
       "registerNotebookSerializer": "function",
       "registerPortAttributesProvider": "function",
@@ -1353,7 +1370,7 @@
       "registerTaskProvider": "function",
       "registerTextDocumentContentProvider": "function",
       "registerTextSearchProvider": "function",
-      "registerTextSearchProviderNew": "function",
+      "registerTextSearchProvider2": "function",
       "registerTimelineProvider": "function",
       "registerTunnelProvider": "function",
       "requestWorkspaceTrust": "function",
