@@ -1,5 +1,5 @@
 {
-  "version": "1.94.2",
+  "version": "1.95.0",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -25,16 +25,25 @@
       "Action": "number",
       "Toolbar": "number"
     },
+    "ChatEditingSessionActionOutcome": {
+      "1": "string",
+      "2": "string",
+      "Accepted": "number",
+      "Rejected": "number"
+    },
     "ChatLocation": {
       "1": "string",
       "2": "string",
       "3": "string",
       "4": "string",
+      "5": "string",
+      "EditingSession": "number",
       "Editor": "number",
       "Notebook": "number",
       "Panel": "number",
       "Terminal": "number"
     },
+    "ChatReferenceBinaryData": "function",
     "ChatRequestEditorData": "function",
     "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
@@ -470,10 +479,18 @@
       "System": "number",
       "User": "number"
     },
-    "LanguageModelChatMessageToolResultPart": "function",
-    "LanguageModelChatResponseTextPart": "function",
-    "LanguageModelChatResponseToolCallPart": "function",
+    "LanguageModelChatToolMode": {
+      "1": "string",
+      "2": "string",
+      "Auto": "number",
+      "Required": "number"
+    },
     "LanguageModelError": "function",
+    "LanguageModelPromptTsxPart": "function",
+    "LanguageModelTextPart": "function",
+    "LanguageModelToolCallPart": "function",
+    "LanguageModelToolResult": "function",
+    "LanguageModelToolResultPart": "function",
     "LanguageStatusSeverity": {
       "0": "string",
       "1": "string",
@@ -1161,13 +1178,16 @@
     },
     "lm": {
       "computeEmbeddings": "function",
+      "fileIsIgnored": "function",
       "invokeTool": "function",
       "onDidChangeChatModels": "function",
       "onDidChangeEmbeddingModels": "function",
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
+      "registerIgnoredFileProvider": "function",
       "registerTool": "function",
-      "selectChatModels": "function"
+      "selectChatModels": "function",
+      "tools": "object"
     },
     "notebooks": {
       "createNotebookController": "function",
