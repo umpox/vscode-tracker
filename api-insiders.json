@@ -1,5 +1,5 @@
 {
-  "version": "1.96.0-insider",
+  "version": "1.97.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -18,6 +18,7 @@
       "Output": "number",
       "Process": "number"
     },
+    "CellErrorStackFrame": "function",
     "ChatCompletionItem": "function",
     "ChatCopyKind": {
       "1": "string",
@@ -28,8 +29,10 @@
     "ChatEditingSessionActionOutcome": {
       "1": "string",
       "2": "string",
+      "3": "string",
       "Accepted": "number",
-      "Rejected": "number"
+      "Rejected": "number",
+      "Saved": "number"
     },
     "ChatLocation": {
       "1": "string",
@@ -365,7 +368,6 @@
       "Deleted": "number"
     },
     "FileCoverage": "function",
-    "FileCoverage2": "function",
     "FileDecoration": "function",
     "FileDecoration2": "function",
     "FilePermission": {
@@ -833,6 +835,20 @@
       "Workspace": "number"
     },
     "TelemetryTrustedValue": "function",
+    "TerminalCompletionItem": "function",
+    "TerminalCompletionItemKind": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "Argument": "number",
+      "File": "number",
+      "Flag": "number",
+      "Folder": "number",
+      "Method": "number"
+    },
+    "TerminalCompletionList": "function",
     "TerminalExitReason": {
       "0": "string",
       "1": "string",
@@ -911,6 +927,14 @@
       "Manual": "number"
     },
     "TextEdit": "function",
+    "TextEditorChangeKind": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Addition": "number",
+      "Deletion": "number",
+      "Modification": "number"
+    },
     "TextEditorCursorStyle": {
       "1": "string",
       "2": "string",
@@ -1055,7 +1079,8 @@
       "registerChatResponseProvider": "function",
       "registerChatVariableResolver": "function",
       "registerMappedEditsProvider": "function",
-      "registerMappedEditsProvider2": "function"
+      "registerMappedEditsProvider2": "function",
+      "registerRelatedFilesProvider": "function"
     },
     "commands": {
       "executeCommand": "function",
@@ -1246,6 +1271,7 @@
       "onDidChangeTerminalDimensions": "function",
       "onDidChangeTerminalShellIntegration": "function",
       "onDidChangeTerminalState": "function",
+      "onDidChangeTextEditorDiffInformation": "function",
       "onDidChangeTextEditorOptions": "function",
       "onDidChangeTextEditorSelection": "function",
       "onDidChangeTextEditorViewColumn": "function",
@@ -1265,6 +1291,7 @@
       "registerProfileContentHandler": "function",
       "registerQuickDiffProvider": "function",
       "registerShareProvider": "function",
+      "registerTerminalCompletionProvider": "function",
       "registerTerminalLinkProvider": "function",
       "registerTerminalProfileProvider": "function",
       "registerTerminalQuickFixProvider": "function",
@@ -1311,7 +1338,6 @@
       "createFileSystemWatcher": "function",
       "findFiles": "function",
       "findFiles2": "function",
-      "findFiles2New": "function",
       "findTextInFiles": "function",
       "findTextInFiles2": "function",
       "fs": {
@@ -1357,7 +1383,6 @@
       "openTextDocument": "function",
       "openTunnel": "function",
       "registerAITextSearchProvider": "function",
-      "registerAITextSearchProvider2": "function",
       "registerCanonicalUriProvider": "function",
       "registerEditSessionIdentityProvider": "function",
       "registerFileSearchProvider": "function",
