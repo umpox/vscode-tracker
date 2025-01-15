@@ -1,7 +1,7 @@
 {
-  "version": "1.96.2",
+  "version": "1.96.3",
   "commands": [
-    "__vsc647ab8c9-3ee6-435f-bf9d-34aa3c02e151",
+    "__vsc013957f6-ba20-424f-9b8b-1c5bef4d2a3f",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -1864,7 +1864,6 @@
     "workbench.action.output.activeOutputLogLevelDefault",
     "workbench.action.output.show.exthost",
     "workbench.action.output.show.main",
-    "workbench.action.output.show.notebook.rendering",
     "workbench.action.output.show.remoteTunnelService",
     "workbench.action.output.show.rendererLog",
     "workbench.action.output.show.sharedprocess",
