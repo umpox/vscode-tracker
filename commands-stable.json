@@ -1,7 +1,8 @@
 {
-  "version": "1.97.1",
+  "version": "1.97.2",
   "commands": [
-    "__vscb8f49ff7-57f8-4187-9e75-d08e66711a9b",
+    "__vsc3f498fb1-efb6-4735-9052-144c570c5db8",
+    "_addReferenceCmd",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -1490,6 +1491,7 @@
     "workbench.action.chat.cancel",
     "workbench.action.chat.clearHistory",
     "workbench.action.chat.clearInputHistory",
+    "workbench.action.chat.configureCodeCompletions",
     "workbench.action.chat.copyAll",
     "workbench.action.chat.copyCodeBlock",
     "workbench.action.chat.copyItem",
