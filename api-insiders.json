@@ -1,5 +1,5 @@
 {
-  "version": "1.98.0-insider",
+  "version": "1.99.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -34,6 +34,14 @@
       "Rejected": "number",
       "Saved": "number"
     },
+    "ChatErrorLevel": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Error": "number",
+      "Info": "number",
+      "Warning": "number"
+    },
     "ChatLocation": {
       "1": "string",
       "2": "string",
@@ -47,6 +55,7 @@
       "Terminal": "number"
     },
     "ChatReferenceBinaryData": "function",
+    "ChatReferenceDiagnostic": "function",
     "ChatRequestEditorData": "function",
     "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
@@ -59,6 +68,7 @@
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseMovePart": "function",
+    "ChatResponseNotebookEditPart": "function",
     "ChatResponseProgressPart": "function",
     "ChatResponseProgressPart2": "function",
     "ChatResponseReferencePart": "function",
@@ -328,6 +338,7 @@
       "None": "number",
       "SearchAndFilesExclude": "number"
     },
+    "ExtendedLanguageModelToolResult": "function",
     "ExtensionKind": {
       "1": "string",
       "2": "string",
@@ -626,6 +637,7 @@
       "Silent": "number"
     },
     "Position": "function",
+    "PreparedTerminalToolInvocation": "function",
     "ProcessExecution": "function",
     "ProgressLocation": {
       "1": "string",
@@ -842,12 +854,16 @@
       "3": "string",
       "4": "string",
       "5": "string",
+      "6": "string",
+      "7": "string",
       "Alias": "number",
       "Argument": "number",
       "File": "number",
       "Flag": "number",
       "Folder": "number",
-      "Method": "number"
+      "Method": "number",
+      "Option": "number",
+      "OptionValue": "number"
     },
     "TerminalCompletionList": "function",
     "TerminalExitReason": {
@@ -1106,7 +1122,6 @@
       "createDynamicChatParticipant": "function",
       "registerChatParticipantDetectionProvider": "function",
       "registerChatResponseProvider": "function",
-      "registerChatVariableResolver": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerRelatedFilesProvider": "function"
@@ -1365,6 +1380,8 @@
       "applyEdit": "function",
       "asRelativePath": "function",
       "createFileSystemWatcher": "function",
+      "decode": "function",
+      "encode": "function",
       "findFiles": "function",
       "findFiles2": "function",
       "findTextInFiles": "function",
