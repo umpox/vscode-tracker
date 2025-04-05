@@ -1,5 +1,5 @@
 {
-  "version": "1.99.0-insider",
+  "version": "1.100.0-insider",
   "api": {
     "BranchCoverage": "function",
     "Breakpoint": "function",
@@ -41,6 +41,13 @@
       "Error": "number",
       "Info": "number",
       "Warning": "number"
+    },
+    "ChatImageMimeType": {
+      "BMP": "string",
+      "GIF": "string",
+      "JPEG": "string",
+      "PNG": "string",
+      "WEBP": "string"
     },
     "ChatLocation": {
       "1": "string",
@@ -483,6 +490,7 @@
       "Stopped": "number"
     },
     "LanguageModelChatMessage": "function",
+    "LanguageModelChatMessage2": "function",
     "LanguageModelChatMessageRole": {
       "1": "string",
       "2": "string",
@@ -497,6 +505,7 @@
       "Auto": "number",
       "Required": "number"
     },
+    "LanguageModelDataPart": "function",
     "LanguageModelError": "function",
     "LanguageModelPromptTsxPart": "function",
     "LanguageModelTextPart": "function",
@@ -529,6 +538,8 @@
     },
     "ManagedResolvedAuthority": "function",
     "MarkdownString": "function",
+    "McpSSEServerDefinition": "function",
+    "McpStdioServerDefinition": "function",
     "MultiDocumentHighlight": "function",
     "NewSymbolName": "function",
     "NewSymbolNameTag": {
@@ -822,6 +833,21 @@
     "TabInputTextMultiDiff": "function",
     "TabInputWebview": "function",
     "Task": "function",
+    "TaskEventKind": {
+      "AcquiredInput": "string",
+      "Active": "string",
+      "Changed": "string",
+      "DependsOnStarted": "string",
+      "End": "string",
+      "Inactive": "string",
+      "ProblemMatcherEnded": "string",
+      "ProblemMatcherFoundErrors": "string",
+      "ProblemMatcherStarted": "string",
+      "ProcessEnded": "string",
+      "ProcessStarted": "string",
+      "Start": "string",
+      "Terminated": "string"
+    },
     "TaskGroup": "function",
     "TaskPanelKind": {
       "1": "string",
@@ -1120,8 +1146,8 @@
     "chat": {
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
+      "onDidDisposeChatSession": "function",
       "registerChatParticipantDetectionProvider": "function",
-      "registerChatResponseProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerRelatedFilesProvider": "function"
@@ -1254,6 +1280,7 @@
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
+      "registerMcpConfigurationProvider": "function",
       "registerTool": "function",
       "selectChatModels": "function",
       "tools": "object"
@@ -1277,8 +1304,10 @@
       "executeTask": "function",
       "fetchTasks": "function",
       "onDidEndTask": "function",
+      "onDidEndTaskProblemMatchers": "function",
       "onDidEndTaskProcess": "function",
       "onDidStartTask": "function",
+      "onDidStartTaskProblemMatchers": "function",
       "onDidStartTaskProcess": "function",
       "registerTaskProvider": "function",
       "taskExecutions": "object"
@@ -1297,6 +1326,7 @@
       "activeNotebookEditor": "undefined",
       "activeTerminal": "undefined",
       "activeTextEditor": "undefined",
+      "createChatStatusItem": "function",
       "createInputBox": "function",
       "createOutputChannel": "function",
       "createQuickPick": "function",
