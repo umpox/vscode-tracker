@@ -1,7 +1,7 @@
 {
-  "version": "1.99.1",
+  "version": "1.99.2",
   "commands": [
-    "__vsc46d7f72f-90e6-4ec2-b486-f3b921a7f09f",
+    "__vsccdb56c7a-fc1a-4b4e-9947-89ed4a3691cf",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
