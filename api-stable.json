@@ -1,6 +1,7 @@
 {
-  "version": "1.99.3",
+  "version": "1.100.0",
   "api": {
+    "AISearchKeyword": "function",
     "BranchCoverage": "function",
     "Breakpoint": "function",
     "CallHierarchyIncomingCall": "function",
@@ -54,8 +55,6 @@
       "2": "string",
       "3": "string",
       "4": "string",
-      "5": "string",
-      "EditingSession": "number",
       "Editor": "number",
       "Notebook": "number",
       "Panel": "number",
@@ -63,14 +62,24 @@
     },
     "ChatReferenceBinaryData": "function",
     "ChatReferenceDiagnostic": "function",
+    "ChatRequestEditedFileEventKind": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Keep": "number",
+      "Undo": "number",
+      "UserModification": "number"
+    },
     "ChatRequestEditorData": "function",
     "ChatRequestNotebookData": "function",
     "ChatRequestTurn": "function",
+    "ChatRequestTurn2": "function",
     "ChatResponseAnchorPart": "function",
     "ChatResponseCodeCitationPart": "function",
     "ChatResponseCodeblockUriPart": "function",
     "ChatResponseCommandButtonPart": "function",
     "ChatResponseConfirmationPart": "function",
+    "ChatResponseExtensionsPart": "function",
     "ChatResponseFileTreePart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
@@ -439,6 +448,14 @@
       "Type": "number"
     },
     "InlayHintLabelPart": "function",
+    "InlineCompletionEndOfLifeReasonKind": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Accepted": "number",
+      "Ignored": "number",
+      "Rejected": "number"
+    },
     "InlineCompletionItem": "function",
     "InlineCompletionList": "function",
     "InlineCompletionTriggerKind": {
@@ -507,11 +524,14 @@
     },
     "LanguageModelDataPart": "function",
     "LanguageModelError": "function",
+    "LanguageModelExtraDataPart": "function",
     "LanguageModelPromptTsxPart": "function",
     "LanguageModelTextPart": "function",
     "LanguageModelToolCallPart": "function",
     "LanguageModelToolResult": "function",
+    "LanguageModelToolResult2": "function",
     "LanguageModelToolResultPart": "function",
+    "LanguageModelToolResultPart2": "function",
     "LanguageStatusSeverity": {
       "0": "string",
       "1": "string",
@@ -538,7 +558,7 @@
     },
     "ManagedResolvedAuthority": "function",
     "MarkdownString": "function",
-    "McpSSEServerDefinition": "function",
+    "McpHttpServerDefinition": "function",
     "McpStdioServerDefinition": "function",
     "MultiDocumentHighlight": "function",
     "NewSymbolName": "function",
@@ -692,6 +712,14 @@
     "SemanticTokensEdit": "function",
     "SemanticTokensEdits": "function",
     "SemanticTokensLegend": "function",
+    "SettingsSearchResultKind": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "CANCELED": "number",
+      "EMBEDDED": "number",
+      "LLM_RANKED": "number"
+    },
     "ShellExecution": "function",
     "ShellQuoting": {
       "1": "string",
@@ -1134,7 +1162,8 @@
     "ai": {
       "getRelatedInformation": "function",
       "registerEmbeddingVectorProvider": "function",
-      "registerRelatedInformationProvider": "function"
+      "registerRelatedInformationProvider": "function",
+      "registerSettingsSearchProvider": "function"
     },
     "authentication": {
       "getAccounts": "function",
@@ -1148,7 +1177,6 @@
       "createDynamicChatParticipant": "function",
       "onDidDisposeChatSession": "function",
       "registerChatParticipantDetectionProvider": "function",
-      "registerChatResponseProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerRelatedFilesProvider": "function"
@@ -1282,6 +1310,7 @@
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
       "registerMcpConfigurationProvider": "function",
+      "registerMcpServerDefinitionProvider": "function",
       "registerTool": "function",
       "selectChatModels": "function",
       "tools": "object"
