@@ -1,7 +1,7 @@
 {
-  "version": "1.100.2",
+  "version": "1.100.3",
   "commands": [
-    "__vscb189e641-ee1a-4d82-8219-7a1d82f603a8",
+    "__vsc5249da2e-56ef-4e6b-b52d-9e2d91808cef",
     "_addReferenceCmd",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
