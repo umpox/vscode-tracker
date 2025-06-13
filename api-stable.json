@@ -1,5 +1,5 @@
 {
-  "version": "1.100.3",
+  "version": "1.101.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -60,6 +60,7 @@
       "Panel": "number",
       "Terminal": "number"
     },
+    "ChatPrepareToolInvocationPart": "function",
     "ChatReferenceBinaryData": "function",
     "ChatReferenceDiagnostic": "function",
     "ChatRequestEditedFileEventKind": {
@@ -524,7 +525,6 @@
     },
     "LanguageModelDataPart": "function",
     "LanguageModelError": "function",
-    "LanguageModelExtraDataPart": "function",
     "LanguageModelPromptTsxPart": "function",
     "LanguageModelTextPart": "function",
     "LanguageModelToolCallPart": "function",
@@ -1309,7 +1309,6 @@
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
-      "registerMcpConfigurationProvider": "function",
       "registerMcpServerDefinitionProvider": "function",
       "registerTool": "function",
       "selectChatModels": "function",
@@ -1319,7 +1318,6 @@
       "createNotebookController": "function",
       "createNotebookControllerDetectionTask": "function",
       "createRendererMessaging": "function",
-      "onDidChangeNotebookCellExecutionState": "function",
       "registerKernelSourceActionProvider": "function",
       "registerNotebookCellStatusBarItemProvider": "function"
     },
