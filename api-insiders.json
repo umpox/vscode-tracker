@@ -1,5 +1,5 @@
 {
-  "version": "1.102.0-insider",
+  "version": "1.103.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -465,12 +465,17 @@
       "Automatic": "number",
       "Invoke": "number"
     },
-    "InlineEdit": "function",
-    "InlineEditTriggerKind": {
+    "InlineCompletionsDisposeReasonKind": {
       "0": "string",
       "1": "string",
-      "Automatic": "number",
-      "Invoke": "number"
+      "2": "string",
+      "3": "string",
+      "4": "string",
+      "Empty": "number",
+      "LostRace": "number",
+      "NotTaken": "number",
+      "Other": "number",
+      "TokenCancellation": "number"
     },
     "InlineValueEvaluatableExpression": "function",
     "InlineValueText": "function",
@@ -910,6 +915,8 @@
       "5": "string",
       "6": "string",
       "7": "string",
+      "8": "string",
+      "9": "string",
       "Alias": "number",
       "Argument": "number",
       "File": "number",
@@ -917,7 +924,9 @@
       "Folder": "number",
       "Method": "number",
       "Option": "number",
-      "OptionValue": "number"
+      "OptionValue": "number",
+      "SymbolicLinkFile": "number",
+      "SymbolicLinkFolder": "number"
     },
     "TerminalCompletionList": "function",
     "TerminalExitReason": {
@@ -1284,7 +1293,6 @@
       "registerImplementationProvider": "function",
       "registerInlayHintsProvider": "function",
       "registerInlineCompletionItemProvider": "function",
-      "registerInlineEditProvider": "function",
       "registerInlineValuesProvider": "function",
       "registerLinkedEditingRangeProvider": "function",
       "registerMultiDocumentHighlightProvider": "function",
