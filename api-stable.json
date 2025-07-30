@@ -1,5 +1,5 @@
 {
-  "version": "1.102.2",
+  "version": "1.102.3",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
