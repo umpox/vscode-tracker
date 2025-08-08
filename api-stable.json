@@ -1,5 +1,5 @@
 {
-  "version": "1.102.3",
+  "version": "1.103.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -76,6 +76,14 @@
     "ChatRequestTurn": "function",
     "ChatRequestTurn2": "function",
     "ChatResponseAnchorPart": "function",
+    "ChatResponseClearToPreviousToolInvocationReason": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "CopyrightContentRetry": "number",
+      "FilteredContentRetry": "number",
+      "NoReason": "number"
+    },
     "ChatResponseCodeCitationPart": "function",
     "ChatResponseCodeblockUriPart": "function",
     "ChatResponseCommandButtonPart": "function",
@@ -85,9 +93,11 @@
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseMovePart": "function",
+    "ChatResponseMultiDiffPart": "function",
     "ChatResponseNotebookEditPart": "function",
     "ChatResponseProgressPart": "function",
     "ChatResponseProgressPart2": "function",
+    "ChatResponsePullRequestPart": "function",
     "ChatResponseReferencePart": "function",
     "ChatResponseReferencePart2": "function",
     "ChatResponseReferencePartStatusKind": {
@@ -100,6 +110,7 @@
     },
     "ChatResponseTextEditPart": "function",
     "ChatResponseTurn": "function",
+    "ChatResponseTurn2": "function",
     "ChatResponseWarningPart": "function",
     "ChatResultFeedbackKind": {
       "0": "string",
@@ -107,6 +118,7 @@
       "Helpful": "number",
       "Unhelpful": "number"
     },
+    "ChatToolInvocationPart": "function",
     "ChatVariableLevel": {
       "1": "string",
       "2": "string",
@@ -529,10 +541,14 @@
       "Required": "number"
     },
     "LanguageModelDataPart": "function",
+    "LanguageModelDataPart2": "function",
     "LanguageModelError": "function",
     "LanguageModelPromptTsxPart": "function",
     "LanguageModelTextPart": "function",
+    "LanguageModelTextPart2": "function",
     "LanguageModelToolCallPart": "function",
+    "LanguageModelToolExtensionSource": "function",
+    "LanguageModelToolMCPSource": "function",
     "LanguageModelToolResult": "function",
     "LanguageModelToolResult2": "function",
     "LanguageModelToolResultPart": "function",
@@ -673,7 +689,6 @@
       "Silent": "number"
     },
     "Position": "function",
-    "PreparedTerminalToolInvocation": "function",
     "ProcessExecution": "function",
     "ProgressLocation": {
       "1": "string",
@@ -1111,6 +1126,12 @@
     "ThemeColor": "function",
     "ThemeIcon": "function",
     "TimelineItem": "function",
+    "ToolResultAudience": {
+      "0": "string",
+      "1": "string",
+      "Assistant": "number",
+      "User": "number"
+    },
     "TreeItem": "function",
     "TreeItemCheckboxState": {
       "0": "string",
@@ -1185,7 +1206,10 @@
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
       "onDidDisposeChatSession": "function",
+      "registerChatOutputRenderer": "function",
       "registerChatParticipantDetectionProvider": "function",
+      "registerChatSessionContentProvider": "function",
+      "registerChatSessionItemProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerRelatedFilesProvider": "function"
@@ -1235,6 +1259,7 @@
         "writeText": "function"
       },
       "createTelemetryLogger": "function",
+      "getDataChannel": "function",
       "isNewAppInstall": "boolean",
       "isTelemetryEnabled": "boolean",
       "language": "string",
@@ -1313,6 +1338,7 @@
       "fileIsIgnored": "function",
       "invokeTool": "function",
       "onDidChangeChatModels": "function",
+      "onDidChangeChatRequestTools": "function",
       "onDidChangeEmbeddingModels": "function",
       "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
@@ -1410,6 +1436,7 @@
       "registerWebviewPanelSerializer": "function",
       "registerWebviewViewProvider": "function",
       "setStatusBarMessage": "function",
+      "showChatSession": "function",
       "showErrorMessage": "function",
       "showInformationMessage": "function",
       "showInputBox": "function",
