@@ -1,5 +1,5 @@
 {
-  "version": "1.104.0-insider",
+  "version": "1.105.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -118,6 +118,14 @@
       "1": "string",
       "Helpful": "number",
       "Unhelpful": "number"
+    },
+    "ChatSessionStatus": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Completed": "number",
+      "Failed": "number",
+      "InProgress": "number"
     },
     "ChatToolInvocationPart": "function",
     "ChatVariableLevel": {
@@ -462,6 +470,12 @@
       "Type": "number"
     },
     "InlayHintLabelPart": "function",
+    "InlineCompletionDisplayLocationKind": {
+      "1": "string",
+      "2": "string",
+      "Code": "number",
+      "Label": "number"
+    },
     "InlineCompletionEndOfLifeReasonKind": {
       "0": "string",
       "1": "string",
@@ -942,16 +956,30 @@
       "7": "string",
       "8": "string",
       "9": "string",
+      "10": "string",
+      "11": "string",
+      "12": "string",
+      "13": "string",
+      "14": "string",
+      "15": "string",
+      "16": "string",
       "Alias": "number",
       "Argument": "number",
+      "Branch": "number",
+      "Commit": "number",
       "File": "number",
       "Flag": "number",
       "Folder": "number",
       "Method": "number",
       "Option": "number",
       "OptionValue": "number",
+      "PullRequest": "number",
+      "PullRequestDone": "number",
+      "Remote": "number",
+      "Stash": "number",
       "SymbolicLinkFile": "number",
-      "SymbolicLinkFolder": "number"
+      "SymbolicLinkFolder": "number",
+      "Tag": "number"
     },
     "TerminalCompletionList": "function",
     "TerminalExitReason": {
@@ -1307,6 +1335,7 @@
       "getLanguages": "function",
       "getTokenInformationAtPosition": "function",
       "match": "function",
+      "onDidChangeCompletionsUnificationState": "function",
       "onDidChangeDiagnostics": "function",
       "registerCallHierarchyProvider": "function",
       "registerCodeActionsProvider": "function",
@@ -1352,9 +1381,9 @@
       "onDidChangeChatModels": "function",
       "onDidChangeChatRequestTools": "function",
       "onDidChangeEmbeddingModels": "function",
-      "registerChatModelProvider": "function",
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
+      "registerLanguageModelChatProvider": "function",
       "registerMcpServerDefinitionProvider": "function",
       "registerTool": "function",
       "selectChatModels": "function",
