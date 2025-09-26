@@ -1,9 +1,9 @@
 {
-  "version": "1.104.1",
+  "version": "1.104.2",
   "commands": [
-    "__vsca6b079bc-33c9-4707-89fc-03d76c97c9d6",
+    "__vsc39df32a4-4c32-472f-b6a1-91582d3870a5",
     "_chat.editSessions.accept",
-    "_configure/652e5216-43ff-4004-b6e3-67d3679bc47c",
+    "_configure/36943ded-80cc-435f-9c28-57072e91bcc6",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -1998,6 +1998,7 @@
     "workbench.action.output.show.tasks",
     "workbench.action.output.show.terminal",
     "workbench.action.output.show.userDataSync",
+    "workbench.action.output.show.vscode.git.Git",
     "workbench.action.output.show.vscode.github-authentication.GitHub Authentication",
     "workbench.action.output.toggleOutput",
     "workbench.action.pauseSocketWriting",
