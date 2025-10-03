@@ -1,9 +1,9 @@
 {
-  "version": "1.104.2",
+  "version": "1.104.3",
   "commands": [
-    "__vsc39df32a4-4c32-472f-b6a1-91582d3870a5",
+    "__vscbb1f0b20-dbdf-41d9-9ea2-2f818f12baee",
     "_chat.editSessions.accept",
-    "_configure/36943ded-80cc-435f-9c28-57072e91bcc6",
+    "_configure/787d765d-a311-4df9-8d1f-a3a6907fc3a1",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -2698,6 +2698,13 @@
     "workbench.views.mcp.installed.resetViewLocation",
     "workbench.views.mcp.marketplace.focus",
     "workbench.views.mcp.marketplace.open",
-    "workbench.views.mcp.marketplace.resetViewLocation"
+    "workbench.views.mcp.marketplace.resetViewLocation",
+    "~remote.forwardedPorts.focus",
+    "~remote.forwardedPorts.open",
+    "~remote.forwardedPorts.removeView",
+    "~remote.forwardedPorts.resetViewLocation",
+    "~remote.forwardedPorts.toggleVisibility",
+    "~remote.forwardedPortsContainer",
+    "~remote.forwardedPortsContainer.resetViewContainerLocation"
   ]
 }
