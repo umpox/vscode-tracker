@@ -1,5 +1,5 @@
 {
-  "version": "1.104.3",
+  "version": "1.105.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
