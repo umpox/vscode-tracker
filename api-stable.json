@@ -1,5 +1,5 @@
 {
-  "version": "1.105.1",
+  "version": "1.106.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -89,6 +89,7 @@
     "ChatResponseCommandButtonPart": "function",
     "ChatResponseConfirmationPart": "function",
     "ChatResponseExtensionsPart": "function",
+    "ChatResponseExternalEditPart": "function",
     "ChatResponseFileTreePart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
@@ -604,7 +605,15 @@
     "ManagedResolvedAuthority": "function",
     "MarkdownString": "function",
     "McpHttpServerDefinition": "function",
+    "McpHttpServerDefinition2": "function",
     "McpStdioServerDefinition": "function",
+    "McpStdioServerDefinition2": "function",
+    "McpToolAvailability": {
+      "0": "string",
+      "1": "string",
+      "Dynamic": "number",
+      "Initial": "number"
+    },
     "MultiDocumentHighlight": "function",
     "NewSymbolName": "function",
     "NewSymbolNameTag": {
@@ -725,7 +734,9 @@
     "QuickInputButtonLocation": {
       "1": "string",
       "2": "string",
+      "3": "string",
       "Inline": "number",
+      "Input": "number",
       "Title": "number"
     },
     "QuickInputButtons": "function",
@@ -965,8 +976,6 @@
       "16": "string",
       "Alias": "number",
       "Argument": "number",
-      "Branch": "number",
-      "Commit": "number",
       "File": "number",
       "Flag": "number",
       "Folder": "number",
@@ -975,11 +984,13 @@
       "OptionValue": "number",
       "PullRequest": "number",
       "PullRequestDone": "number",
-      "Remote": "number",
-      "Stash": "number",
+      "ScmBranch": "number",
+      "ScmCommit": "number",
+      "ScmRemote": "number",
+      "ScmStash": "number",
+      "ScmTag": "number",
       "SymbolicLinkFile": "number",
-      "SymbolicLinkFolder": "number",
-      "Tag": "number"
+      "SymbolicLinkFolder": "number"
     },
     "TerminalCompletionList": "function",
     "TerminalExitReason": {
@@ -1246,6 +1257,7 @@
       "createChatParticipant": "function",
       "createDynamicChatParticipant": "function",
       "onDidDisposeChatSession": "function",
+      "registerChatContextProvider": "function",
       "registerChatOutputRenderer": "function",
       "registerChatParticipantDetectionProvider": "function",
       "registerChatSessionContentProvider": "function",
@@ -1377,13 +1389,16 @@
     "lm": {
       "computeEmbeddings": "function",
       "fileIsIgnored": "function",
+      "getModelProxy": "function",
       "invokeTool": "function",
       "onDidChangeChatModels": "function",
       "onDidChangeChatRequestTools": "function",
       "onDidChangeEmbeddingModels": "function",
+      "onDidChangeModelProxyAvailability": "function",
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
       "registerLanguageModelChatProvider": "function",
+      "registerLanguageModelProxyProvider": "function",
       "registerMcpServerDefinitionProvider": "function",
       "registerTool": "function",
       "selectChatModels": "function",
@@ -1477,7 +1492,6 @@
       "registerWebviewPanelSerializer": "function",
       "registerWebviewViewProvider": "function",
       "setStatusBarMessage": "function",
-      "showChatSession": "function",
       "showErrorMessage": "function",
       "showInformationMessage": "function",
       "showInputBox": "function",
