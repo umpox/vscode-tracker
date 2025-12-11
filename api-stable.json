@@ -1,5 +1,5 @@
 {
-  "version": "1.106.3",
+  "version": "1.107.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -120,6 +120,7 @@
       "Helpful": "number",
       "Unhelpful": "number"
     },
+    "ChatSessionChangedFile": "function",
     "ChatSessionStatus": {
       "0": "string",
       "1": "string",
@@ -1262,6 +1263,7 @@
       "registerChatParticipantDetectionProvider": "function",
       "registerChatSessionContentProvider": "function",
       "registerChatSessionItemProvider": "function",
+      "registerCustomAgentsProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerRelatedFilesProvider": "function"
