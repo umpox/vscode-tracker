@@ -1,5 +1,5 @@
 {
-  "version": "1.108.0-insider",
+  "version": "1.109.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -423,6 +423,8 @@
     "FilePermission": {
       "1": "string",
       "2": "string",
+      "4": "string",
+      "Executable": "number",
       "Locked": "number",
       "Readonly": "number"
     },
@@ -1044,6 +1046,7 @@
       "11": "string",
       "12": "string",
       "13": "string",
+      "14": "string",
       "Bash": "number",
       "CommandPrompt": "number",
       "Csh": "number",
@@ -1056,6 +1059,7 @@
       "PowerShell": "number",
       "Python": "number",
       "Sh": "number",
+      "Xonsh": "number",
       "Zsh": "number"
     },
     "TestCoverageCount": "function",
