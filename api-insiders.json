@@ -1,5 +1,5 @@
 {
-  "version": "1.109.0-insider",
+  "version": "1.110.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -43,6 +43,12 @@
       "Info": "number",
       "Warning": "number"
     },
+    "ChatHookResultKind": {
+      "1": "string",
+      "2": "string",
+      "Error": "number",
+      "Success": "number"
+    },
     "ChatImageMimeType": {
       "BMP": "string",
       "GIF": "string",
@@ -60,7 +66,15 @@
       "Panel": "number",
       "Terminal": "number"
     },
-    "ChatPrepareToolInvocationPart": "function",
+    "ChatQuestion": "function",
+    "ChatQuestionType": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "MultiSelect": "number",
+      "SingleSelect": "number",
+      "Text": "number"
+    },
     "ChatReferenceBinaryData": "function",
     "ChatReferenceDiagnostic": "function",
     "ChatRequestEditedFileEventKind": {
@@ -99,6 +113,7 @@
     "ChatResponseProgressPart": "function",
     "ChatResponseProgressPart2": "function",
     "ChatResponsePullRequestPart": "function",
+    "ChatResponseQuestionCarouselPart": "function",
     "ChatResponseReferencePart": "function",
     "ChatResponseReferencePart2": "function",
     "ChatResponseReferencePartStatusKind": {
@@ -114,6 +129,7 @@
     "ChatResponseTurn": "function",
     "ChatResponseTurn2": "function",
     "ChatResponseWarningPart": "function",
+    "ChatResponseWorkspaceEditPart": "function",
     "ChatResultFeedbackKind": {
       "0": "string",
       "1": "string",
@@ -121,6 +137,7 @@
       "Unhelpful": "number"
     },
     "ChatSessionChangedFile": "function",
+    "ChatSessionChangedFile2": "function",
     "ChatSessionStatus": {
       "0": "string",
       "1": "string",
@@ -128,6 +145,14 @@
       "Completed": "number",
       "Failed": "number",
       "InProgress": "number"
+    },
+    "ChatTodoStatus": {
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Completed": "number",
+      "InProgress": "number",
+      "NotStarted": "number"
     },
     "ChatToolInvocationPart": "function",
     "ChatVariableLevel": {
@@ -617,6 +642,7 @@
       "Dynamic": "number",
       "Initial": "number"
     },
+    "McpToolInvocationContentData": "function",
     "MultiDocumentHighlight": "function",
     "NewSymbolName": "function",
     "NewSymbolNameTag": {
@@ -1260,17 +1286,24 @@
     },
     "chat": {
       "createChatParticipant": "function",
+      "createChatSessionItemController": "function",
       "createDynamicChatParticipant": "function",
+      "executeHook": "function",
       "onDidDisposeChatSession": "function",
       "registerChatContextProvider": "function",
+      "registerChatExplicitContextProvider": "function",
       "registerChatOutputRenderer": "function",
       "registerChatParticipantDetectionProvider": "function",
+      "registerChatResourceContextProvider": "function",
       "registerChatSessionContentProvider": "function",
       "registerChatSessionItemProvider": "function",
-      "registerCustomAgentsProvider": "function",
+      "registerChatWorkspaceContextProvider": "function",
+      "registerCustomAgentProvider": "function",
+      "registerInstructionsProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
-      "registerRelatedFilesProvider": "function"
+      "registerPromptFileProvider": "function",
+      "registerSkillProvider": "function"
     },
     "commands": {
       "executeCommand": "function",
@@ -1400,6 +1433,7 @@
       "onDidChangeChatModels": "function",
       "onDidChangeChatRequestTools": "function",
       "onDidChangeEmbeddingModels": "function",
+      "onDidChangeMcpServerDefinitions": "function",
       "onDidChangeModelProxyAvailability": "function",
       "registerEmbeddingsProvider": "function",
       "registerIgnoredFileProvider": "function",
@@ -1407,6 +1441,7 @@
       "registerLanguageModelProxyProvider": "function",
       "registerMcpServerDefinitionProvider": "function",
       "registerTool": "function",
+      "registerToolDefinition": "function",
       "selectChatModels": "function",
       "tools": "object"
     },
@@ -1555,6 +1590,7 @@
       "getConfiguration": "function",
       "getRemoteExecServer": "function",
       "getWorkspaceFolder": "function",
+      "isResourceTrusted": "function",
       "isTrusted": "boolean",
       "name": "undefined",
       "notebookDocuments": "object",
@@ -1563,6 +1599,7 @@
       "onDidChangeTextDocument": "function",
       "onDidChangeTunnels": "function",
       "onDidChangeWorkspaceFolders": "function",
+      "onDidChangeWorkspaceTrustedFolders": "function",
       "onDidCloseNotebookDocument": "function",
       "onDidCloseTextDocument": "function",
       "onDidCreateFiles": "function",
@@ -1598,6 +1635,7 @@
       "registerTextSearchProvider2": "function",
       "registerTimelineProvider": "function",
       "registerTunnelProvider": "function",
+      "requestResourceTrust": "function",
       "requestWorkspaceTrust": "function",
       "rootPath": "undefined",
       "save": "function",
