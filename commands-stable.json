@@ -1,9 +1,9 @@
 {
-  "version": "1.109.0",
+  "version": "1.109.2",
   "commands": [
-    "__vsc57d3c763-2bcf-4546-bbab-d9e40fa30f0b",
+    "__vsc969abc68-9230-4f04-a017-467f5d021d4a",
     "_chat.editSessions.accept",
-    "_configure/1b5d998a-2e9b-425b-8c57-8b37dd78e8d2",
+    "_configure/5814b5d8-11c4-44c4-a004-41c2069e0fbe",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
@@ -92,6 +92,7 @@
     "_workbench.open",
     "_workbench.openMultiDiffEditor",
     "_workbench.openScmMultiDiffEditor",
+    "_workbench.openUserSettingsEditor",
     "_workbench.openWith",
     "_workbench.pickWorkspaceFolder",
     "_workbench.removeFromRecentlyOpened",
@@ -1373,6 +1374,7 @@
     "settings.filterByOnline",
     "settings.filterByTelemetry",
     "settings.filterUntrusted",
+    "settings.switchToJSON",
     "showCustomTitleBar",
     "showEditorScreenReaderNotification",
     "showNextParameterHint",
