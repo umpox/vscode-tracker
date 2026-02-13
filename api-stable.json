@@ -1,5 +1,5 @@
 {
-  "version": "1.109.2",
+  "version": "1.109.3",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -99,6 +99,7 @@
     "ChatResponseExtensionsPart": "function",
     "ChatResponseExternalEditPart": "function",
     "ChatResponseFileTreePart": "function",
+    "ChatResponseHookPart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseMovePart": "function",
