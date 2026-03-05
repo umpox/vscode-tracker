@@ -1,5 +1,5 @@
 {
-  "version": "1.110.0-insider",
+  "version": "1.111.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -27,6 +27,47 @@
       "Action": "number",
       "Toolbar": "number"
     },
+    "ChatDebugAgentResponseEvent": "function",
+    "ChatDebugEventMessageContent": "function",
+    "ChatDebugEventModelTurnContent": "function",
+    "ChatDebugEventTextContent": "function",
+    "ChatDebugEventToolCallContent": "function",
+    "ChatDebugGenericEvent": "function",
+    "ChatDebugLogLevel": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "3": "string",
+      "Error": "number",
+      "Info": "number",
+      "Trace": "number",
+      "Warning": "number"
+    },
+    "ChatDebugMessageContentType": {
+      "0": "string",
+      "1": "string",
+      "Agent": "number",
+      "User": "number"
+    },
+    "ChatDebugMessageSection": "function",
+    "ChatDebugModelTurnEvent": "function",
+    "ChatDebugSubagentInvocationEvent": "function",
+    "ChatDebugSubagentStatus": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Completed": "number",
+      "Failed": "number",
+      "Running": "number"
+    },
+    "ChatDebugToolCallEvent": "function",
+    "ChatDebugToolCallResult": {
+      "0": "string",
+      "1": "string",
+      "Error": "number",
+      "Success": "number"
+    },
+    "ChatDebugUserMessageEvent": "function",
     "ChatEditingSessionActionOutcome": {
       "1": "string",
       "2": "string",
@@ -42,12 +83,6 @@
       "Error": "number",
       "Info": "number",
       "Warning": "number"
-    },
-    "ChatHookResultKind": {
-      "1": "string",
-      "2": "string",
-      "Error": "number",
-      "Success": "number"
     },
     "ChatImageMimeType": {
       "BMP": "string",
@@ -105,6 +140,7 @@
     "ChatResponseExtensionsPart": "function",
     "ChatResponseExternalEditPart": "function",
     "ChatResponseFileTreePart": "function",
+    "ChatResponseHookPart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseMovePart": "function",
@@ -142,10 +178,13 @@
       "0": "string",
       "1": "string",
       "2": "string",
+      "3": "string",
       "Completed": "number",
       "Failed": "number",
-      "InProgress": "number"
+      "InProgress": "number",
+      "NeedsInput": "number"
     },
+    "ChatSubagentToolInvocationData": "function",
     "ChatTodoStatus": {
       "1": "string",
       "2": "string",
@@ -1288,9 +1327,12 @@
       "createChatParticipant": "function",
       "createChatSessionItemController": "function",
       "createDynamicChatParticipant": "function",
-      "executeHook": "function",
+      "onDidChangeCustomAgents": "function",
+      "onDidChangeInstructions": "function",
+      "onDidChangeSkills": "function",
       "onDidDisposeChatSession": "function",
       "registerChatContextProvider": "function",
+      "registerChatDebugLogProvider": "function",
       "registerChatExplicitContextProvider": "function",
       "registerChatOutputRenderer": "function",
       "registerChatParticipantDetectionProvider": "function",
@@ -1351,6 +1393,7 @@
       },
       "createTelemetryLogger": "function",
       "getDataChannel": "function",
+      "isAppPortable": "boolean",
       "isNewAppInstall": "boolean",
       "isTelemetryEnabled": "boolean",
       "language": "string",
@@ -1443,6 +1486,7 @@
       "registerTool": "function",
       "registerToolDefinition": "function",
       "selectChatModels": "function",
+      "startMcpGateway": "function",
       "tools": "object"
     },
     "notebooks": {
@@ -1495,6 +1539,7 @@
       "createTreeView": "function",
       "createWebviewPanel": "function",
       "createWebviewTextEditorInset": "function",
+      "onDidChangeActiveChatPanelSessionResource": "function",
       "onDidChangeActiveColorTheme": "function",
       "onDidChangeActiveNotebookEditor": "function",
       "onDidChangeActiveTerminal": "function",
