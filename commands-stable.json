@@ -1,9 +1,9 @@
 {
-  "version": "1.110.0",
+  "version": "1.110.1",
   "commands": [
-    "__vsc1e43b8c8-b90f-4683-ab1c-00bfe7f3e130",
+    "__vsc28cd6ece-5b65-4737-9e0b-fa2b31ba6d5f",
     "_chat.editSessions.accept",
-    "_configure/b98d2481-b1d3-4f15-9acd-c9e56d4e0134",
+    "_configure/a7366540-e152-4a7a-a6b5-726297845f5f",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
     "_executeColorPresentationProvider",
