@@ -1,5 +1,5 @@
 {
-  "version": "1.110.1",
+  "version": "1.111.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1327,6 +1327,9 @@
       "createChatParticipant": "function",
       "createChatSessionItemController": "function",
       "createDynamicChatParticipant": "function",
+      "onDidChangeCustomAgents": "function",
+      "onDidChangeInstructions": "function",
+      "onDidChangeSkills": "function",
       "onDidDisposeChatSession": "function",
       "registerChatContextProvider": "function",
       "registerChatDebugLogProvider": "function",
