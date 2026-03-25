@@ -1,5 +1,5 @@
 {
-  "version": "1.113.0-insider",
+  "version": "1.114.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -28,11 +28,20 @@
       "Toolbar": "number"
     },
     "ChatDebugAgentResponseEvent": "function",
+    "ChatDebugEventHookContent": "function",
     "ChatDebugEventMessageContent": "function",
     "ChatDebugEventModelTurnContent": "function",
     "ChatDebugEventTextContent": "function",
     "ChatDebugEventToolCallContent": "function",
     "ChatDebugGenericEvent": "function",
+    "ChatDebugHookResult": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Error": "number",
+      "NonBlockingError": "number",
+      "Success": "number"
+    },
     "ChatDebugLogLevel": {
       "0": "string",
       "1": "string",
