@@ -1,5 +1,5 @@
 {
-  "version": "1.114.0",
+  "version": "1.115.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1346,7 +1346,9 @@
       "createChatSessionItemController": "function",
       "createDynamicChatParticipant": "function",
       "onDidChangeCustomAgents": "function",
+      "onDidChangeHooks": "function",
       "onDidChangeInstructions": "function",
+      "onDidChangePlugins": "function",
       "onDidChangeSkills": "function",
       "onDidDisposeChatSession": "function",
       "onDidReceiveChatDebugEvent": "function",
@@ -1361,6 +1363,7 @@
       "registerChatSessionItemProvider": "function",
       "registerChatWorkspaceContextProvider": "function",
       "registerCustomAgentProvider": "function",
+      "registerHookProvider": "function",
       "registerInstructionsProvider": "function",
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
