@@ -1,5 +1,5 @@
 {
-  "version": "1.117.0-insider",
+  "version": "1.118.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -150,6 +150,7 @@
     "ChatResponseExternalEditPart": "function",
     "ChatResponseFileTreePart": "function",
     "ChatResponseHookPart": "function",
+    "ChatResponseInfoPart": "function",
     "ChatResponseMarkdownPart": "function",
     "ChatResponseMarkdownWithVulnerabilitiesPart": "function",
     "ChatResponseMovePart": "function",
@@ -182,7 +183,6 @@
       "Unhelpful": "number"
     },
     "ChatSessionChangedFile": "function",
-    "ChatSessionChangedFile2": "function",
     "ChatSessionCustomizationType": "function",
     "ChatSessionStatus": {
       "0": "string",
