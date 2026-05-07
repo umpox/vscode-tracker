@@ -1,5 +1,5 @@
 {
-  "version": "1.118.1",
+  "version": "1.119.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -99,6 +99,14 @@
       "JPEG": "string",
       "PNG": "string",
       "WEBP": "string"
+    },
+    "ChatInputNotificationSeverity": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "Error": "number",
+      "Info": "number",
+      "Warning": "number"
     },
     "ChatLocation": {
       "1": "string",
@@ -1345,6 +1353,7 @@
       "createChatParticipant": "function",
       "createChatSessionItemController": "function",
       "createDynamicChatParticipant": "function",
+      "createInputNotification": "function",
       "getCustomAgents": "function",
       "getHooks": "function",
       "getInstructions": "function",
