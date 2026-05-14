@@ -1,5 +1,5 @@
 {
-  "version": "1.119.1",
+  "version": "1.120.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1678,6 +1678,7 @@
       "getCanonicalUri": "function",
       "getConfiguration": "function",
       "getRemoteExecServer": "function",
+      "getTextDiff": "function",
       "getWorkspaceFolder": "function",
       "isResourceTrusted": "function",
       "isTrusted": "boolean",
