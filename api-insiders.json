@@ -1,5 +1,5 @@
 {
-  "version": "1.122.0-insider",
+  "version": "1.123.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1384,7 +1384,8 @@
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerPromptFileProvider": "function",
-      "registerSkillProvider": "function"
+      "registerSkillProvider": "function",
+      "updateQuotas": "function"
     },
     "commands": {
       "executeCommand": "function",
