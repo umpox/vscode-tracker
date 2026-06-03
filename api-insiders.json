@@ -1,5 +1,5 @@
 {
-  "version": "1.123.0-insider",
+  "version": "1.124.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
