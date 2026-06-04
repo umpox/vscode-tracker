@@ -1,5 +1,5 @@
 {
-  "version": "1.122.1",
+  "version": "1.123.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1384,7 +1384,8 @@
       "registerMappedEditsProvider": "function",
       "registerMappedEditsProvider2": "function",
       "registerPromptFileProvider": "function",
-      "registerSkillProvider": "function"
+      "registerSkillProvider": "function",
+      "updateQuotas": "function"
     },
     "commands": {
       "executeCommand": "function",
