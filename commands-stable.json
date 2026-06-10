@@ -1,14 +1,14 @@
 {
-  "version": "1.123.0",
+  "version": "1.123.1",
   "commands": [
-    "__vscf184f7ab-9bae-4240-bcd3-8817dc2f2a5b",
+    "__vsc90e503b0-6c77-435d-8b47-f64030299aa3",
     "_agentHost.permission.allow",
     "_agentHost.permission.allowAlways",
     "_agentHost.permission.deny",
     "_chat.editSessions.accept",
     "_chat.notifyQuestionCarouselAnswer",
     "_chat.resizeImage",
-    "_configure/7f35a109-5fb7-4571-aa47-a08332887bf9",
+    "_configure/2691f612-dbc4-4e0d-8f9c-175cd6683af4",
     "_developer.getConfigurationInformation",
     "_executeCodeActionProvider",
     "_executeCodeLensProvider",
