@@ -1,5 +1,5 @@
 {
-  "version": "1.125.1",
+  "version": "1.126.0",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -979,6 +979,18 @@
       "1": "string",
       "Deprecated": "number"
     },
+    "SyntaxHighlightingTokenFontStyle": {
+      "0": "string",
+      "1": "string",
+      "2": "string",
+      "4": "string",
+      "8": "string",
+      "Bold": "number",
+      "Italic": "number",
+      "None": "number",
+      "Strikethrough": "number",
+      "Underline": "number"
+    },
     "SyntaxTokenType": {
       "0": "string",
       "1": "string",
@@ -1463,6 +1475,7 @@
       "uri": "undefined"
     },
     "languages": {
+      "computeFullSyntaxHighlighting": "function",
       "createDiagnosticCollection": "function",
       "createLanguageStatusItem": "function",
       "getDiagnostics": "function",
