@@ -1,5 +1,5 @@
 {
-  "version": "1.127.0-insider",
+  "version": "1.128.0-insider",
   "api": {
     "AISearchKeyword": "function",
     "BranchCoverage": "function",
@@ -1586,6 +1586,7 @@
       "createInputBox": "function",
       "createOutputChannel": "function",
       "createQuickPick": "function",
+      "createSourceControlDiffInformation": "function",
       "createStatusBarItem": "function",
       "createTerminal": "function",
       "createTextEditorDecorationType": "function",
